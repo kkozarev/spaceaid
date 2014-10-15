@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceAidAppWeb", "SpaceAidAppWeb\SpaceAidAppWeb.csproj", "{3A54E23E-2314-45B6-BCEE-A2EE666F09B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceAidAppWeb.Tests", "SpaceAidAppWeb.Tests\SpaceAidAppWeb.Tests.csproj", "{5801F457-A2BC-47AF-B2EF-B30E5377A902}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceAidAppModels", "SpaceAidAppModels\SpaceAidAppModels.csproj", "{FE49314F-C4A5-48BC-B9B3-3AFDDFEC4445}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceAidAppData", "SpaceAidAppData\SpaceAidAppData.csproj", "{1552195C-3CB5-4814-9BF6-2F4E5EBC0E87}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A54E23E-2314-45B6-BCEE-A2EE666F09B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A54E23E-2314-45B6-BCEE-A2EE666F09B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A54E23E-2314-45B6-BCEE-A2EE666F09B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A54E23E-2314-45B6-BCEE-A2EE666F09B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5801F457-A2BC-47AF-B2EF-B30E5377A902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5801F457-A2BC-47AF-B2EF-B30E5377A902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5801F457-A2BC-47AF-B2EF-B30E5377A902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5801F457-A2BC-47AF-B2EF-B30E5377A902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE49314F-C4A5-48BC-B9B3-3AFDDFEC4445}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE49314F-C4A5-48BC-B9B3-3AFDDFEC4445}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE49314F-C4A5-48BC-B9B3-3AFDDFEC4445}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE49314F-C4A5-48BC-B9B3-3AFDDFEC4445}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1552195C-3CB5-4814-9BF6-2F4E5EBC0E87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1552195C-3CB5-4814-9BF6-2F4E5EBC0E87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1552195C-3CB5-4814-9BF6-2F4E5EBC0E87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1552195C-3CB5-4814-9BF6-2F4E5EBC0E87}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

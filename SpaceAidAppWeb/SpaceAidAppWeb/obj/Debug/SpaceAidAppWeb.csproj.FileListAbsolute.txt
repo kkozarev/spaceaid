@@ -1,0 +1,188 @@
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\SpaceAidAppWeb.dll.config
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\SpaceAidAppWeb.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\SpaceAidAppWeb.pdb
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\Antlr3.Runtime.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.AspNet.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.Core.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.OAuth.Consumer.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.OAuth.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.OpenId.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\EntityFramework.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\Microsoft.Data.Edm.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\Microsoft.Data.OData.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\Microsoft.Web.Infrastructure.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\Microsoft.Web.WebPages.OAuth.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\Newtonsoft.Json.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Net.Http.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Net.Http.Formatting.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Net.Http.WebRequest.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Spatial.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Helpers.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Http.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Http.OData.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Http.WebHost.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Mvc.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Optimization.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Razor.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.WebPages.Deployment.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.WebPages.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.WebPages.Razor.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\WebGrease.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\WebMatrix.Data.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\WebMatrix.WebData.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\EntityFramework.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\Newtonsoft.Json.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Net.Http.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Net.Http.Formatting.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Net.Http.WebRequest.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Helpers.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Http.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Http.WebHost.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Mvc.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Razor.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.WebPages.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.WebPages.Deployment.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.WebPages.Razor.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\WebMatrix.Data.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\Microsoft.Web.WebPages.OAuth.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\WebMatrix.WebData.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.AspNet.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.Core.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.OAuth.Consumer.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.OAuth.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.OpenId.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Http.OData.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\Microsoft.Data.Edm.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\Microsoft.Data.OData.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Spatial.xml
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\de\Microsoft.Data.Edm.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\es\Microsoft.Data.Edm.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\fr\Microsoft.Data.Edm.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\it\Microsoft.Data.Edm.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\ja\Microsoft.Data.Edm.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\ko\Microsoft.Data.Edm.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\ru\Microsoft.Data.Edm.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\de\Microsoft.Data.OData.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\es\Microsoft.Data.OData.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\fr\Microsoft.Data.OData.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\it\Microsoft.Data.OData.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\ja\Microsoft.Data.OData.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\ko\Microsoft.Data.OData.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\ru\Microsoft.Data.OData.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\de\System.Spatial.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\es\System.Spatial.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\fr\System.Spatial.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\it\System.Spatial.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\ja\System.Spatial.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\ko\System.Spatial.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\ru\System.Spatial.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\zh-Hans\System.Spatial.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\zh-Hant\System.Spatial.resources.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\obj\Debug\SpaceAidAppWeb.csprojResolveAssemblyReference.cache
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\obj\Debug\SpaceAidAppWeb.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\obj\Debug\SpaceAidAppWeb.pdb
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\SpaceAidAppData.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\SpaceAidAppModels.dll
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\SpaceAidAppData.pdb
+M:\Applications\NASA SPACE CHALLANGE\SpaceAidAppWeb\SpaceAidAppWeb\bin\SpaceAidAppModels.pdb
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\SpaceAidAppWeb.dll.config
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\SpaceAidAppWeb.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\SpaceAidAppWeb.pdb
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\Antlr3.Runtime.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.Core.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\EntityFramework.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\Microsoft.Data.Edm.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\Microsoft.Data.OData.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\Newtonsoft.Json.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\SpaceAidAppData.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\SpaceAidAppModels.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Net.Http.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Net.Http.Formatting.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Net.Http.WebRequest.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Spatial.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Helpers.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Http.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Http.OData.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Http.WebHost.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Mvc.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Optimization.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Razor.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.WebPages.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.WebPages.Razor.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\WebGrease.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\WebMatrix.Data.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\WebMatrix.WebData.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\SpaceAidAppData.pdb
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\SpaceAidAppModels.pdb
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\EntityFramework.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\Newtonsoft.Json.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Net.Http.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Net.Http.Formatting.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Net.Http.WebRequest.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Helpers.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Http.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Http.WebHost.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Mvc.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Razor.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.WebPages.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.WebPages.Razor.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\WebMatrix.Data.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\WebMatrix.WebData.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.Core.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Web.Http.OData.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\Microsoft.Data.Edm.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\Microsoft.Data.OData.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\System.Spatial.xml
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\de\System.Spatial.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\es\System.Spatial.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\fr\System.Spatial.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\it\System.Spatial.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\ja\System.Spatial.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\ko\System.Spatial.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\ru\System.Spatial.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\obj\Debug\SpaceAidAppWeb.csprojResolveAssemblyReference.cache
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\obj\Debug\SpaceAidAppWeb.dll
+C:\Users\Bon\Documents\GitHub\spaceaid\SpaceAidAppWeb\SpaceAidAppWeb\obj\Debug\SpaceAidAppWeb.pdb
