@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "src_date": null, "src_info": null, "act_id": "EMSR-923", "ext_scale": "10k", "nam": "Asparuhovo", "ext_date": null, "txt": "suburb", "subtype": "ZD040 - Named Location", "admin_lev": "populated place", "source_nam": "Open Street Map" }, "geometry": { "type": "Point", "coordinates": [ 27.897097795999947, 43.180492996994815 ] } },
+{ "type": "Feature", "properties": { "src_date": null, "src_info": null, "act_id": "EMSR-923", "ext_scale": "10k", "nam": "Varna", "ext_date": null, "txt": "city", "subtype": "ZD040 - Named Location", "admin_lev": "populated place", "source_nam": "Open Street Map" }, "geometry": { "type": "Point", "coordinates": [ 27.9017136659999, 43.199985957994819 ] } }
+]
+}
