@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C6427BF8-60A3-4544-B02F-A33C97BA1934}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpaceAidBasic</RootNamespace>
+    <AssemblyName>SpaceAidBasic</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about-us.html" />
+    <Content Include="contact-us.html" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\flexslider.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\templatemo_misc.css" />
+    <Content Include="css\templatemo_style.css" />
+    <Content Include="css\testimonails-slider.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="images\author-comment1.jpg" />
+    <Content Include="images\author-comment2.jpg" />
+    <Content Include="images\author-comment3.jpg" />
+    <Content Include="images\author-comment4.jpg" />
+    <Content Include="images\author1.jpg" />
+    <Content Include="images\author2.jpg" />
+    <Content Include="images\author3.jpg" />
+    <Content Include="images\author4.jpg" />
+    <Content Include="images\bg-image.jpg" />
+    <Content Include="images\blogpost1.jpg" />
+    <Content Include="images\blogpost2.jpg" />
+    <Content Include="images\blogpost3.jpg" />
+    <Content Include="images\blogpost4.jpg" />
+    <Content Include="images\blogpost5.jpg" />
+    <Content Include="images\blogpost6.jpg" />
+    <Content Include="images\cosmos.jpg" />
+    <Content Include="images\div-line.png" />
+    <Content Include="images\flickr-image1.jpg" />
+    <Content Include="images\flickr-image2.jpg" />
+    <Content Include="images\flickr-image3.jpg" />
+    <Content Include="images\flickr-image4.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo_sa.jpg" />
+    <Content Include="images\mountain.jpg" />
+    <Content Include="images\open-icon.png" />
+    <Content Include="images\product1.jpg" />
+    <Content Include="images\product1_big.jpg" />
+    <Content Include="images\product2.jpg" />
+    <Content Include="images\product2_big.jpg" />
+    <Content Include="images\product3.jpg" />
+    <Content Include="images\product3_big.jpg" />
+    <Content Include="images\product4.jpg" />
+    <Content Include="images\product4_big.jpg" />
+    <Content Include="images\product5.jpg" />
+    <Content Include="images\product5_big.jpg" />
+    <Content Include="images\product6.jpg" />
+    <Content Include="images\product6_big.jpg" />
+    <Content Include="images\product7.jpg" />
+    <Content Include="images\product7_big.jpg" />
+    <Content Include="images\product8.jpg" />
+    <Content Include="images\product8_big.jpg" />
+    <Content Include="images\rainfall.jpg" />
+    <Content Include="images\recent-post1.jpg" />
+    <Content Include="images\recent-post2.jpg" />
+    <Content Include="images\recent-post3.jpg" />
+    <Content Include="images\search-icon.png" />
+    <Content Include="images\single-post.jpg" />
+    <Content Include="images\slide1.jpg" />
+    <Content Include="images\slide2.jpg" />
+    <Content Include="images\slide3.jpg" />
+    <Content Include="images\stars.jpg" />
+    <Content Include="images\subscribe-icon.png" />
+    <Content Include="images\timeline1.jpg" />
+    <Content Include="images\timeline2.jpg" />
+    <Content Include="images\timeline3.jpg" />
+    <Content Include="images\timeline4.jpg" />
+    <Content Include="images\timeline5.jpg" />
+    <Content Include="images\timeline6.jpg" />
+    <Content Include="images\under-heading.png" />
+    <Content Include="index.html" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\custom-scrips.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\plugins.js" />
+    <Content Include="js\vendor\d3.js" />
+    <Content Include="js\vendor\d3.min.js" />
+    <Content Include="js\vendor\jquery-1.11.0.min.js" />
+    <Content Include="js\vendor\jquery.gmap3.min.js" />
+    <Content Include="js\vendor\modernizr-2.6.1-respond-1.1.0.min.js" />
+    <Content Include="products.html" />
+    <Content Include="single-post.html" />
+    <Content Include="Tests\mapbox.html" />
+    <Content Include="Views\test.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="images\Thumbs.db" />
+    <Content Include="JSON\earthQuakes.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_00REFERENCE_00OVERVIEW_v1_16000_area_of_interest.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_00REFERENCE_00OVERVIEW_v1_16000_hydrology_line.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_00REFERENCE_00OVERVIEW_v1_16000_hydrology_poly.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_00REFERENCE_00OVERVIEW_v1_16000_points_of_interest.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_00REFERENCE_00OVERVIEW_v1_16000_settlements_point.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_00REFERENCE_00OVERVIEW_v1_16000_transportation_line.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_00REFERENCE_00OVERVIEW_v1_16000_transportation_point.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_00REFERENCE_00OVERVIEW_v1_16000_utilities_poly.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_area_of_interest.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_hydrology_line.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_hydrology_poly.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_points_of_interest.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_settlements_point.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_transportation_line.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_utilities_poly.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_01DELINEATION_00OVERVIEW_v1_16000_area_of_interest.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_01DELINEATION_00OVERVIEW_v1_16000_crisis_information_point.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_01DELINEATION_00OVERVIEW_v1_16000_crisis_information_poly.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_01DELINEATION_00OVERVIEW_v1_16000_general_information_poly.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_01DELINEATION_00OVERVIEW_v1_16000_hydrology_line.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_01DELINEATION_00OVERVIEW_v1_16000_hydrology_poly.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_01DELINEATION_00OVERVIEW_v1_16000_points_of_interest.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_01DELINEATION_00OVERVIEW_v1_16000_settlements_point.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_01DELINEATION_00OVERVIEW_v1_16000_transportation_line.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_01DELINEATION_00OVERVIEW_v1_16000_transportation_point.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_01DELINEATION_00OVERVIEW_v1_16000_utilities_poly.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_01DELINEATION_01DETAIL_v1_8000_area_of_interest.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_01DELINEATION_01DETAIL_v1_8000_crisis_information_point.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_01DELINEATION_01DETAIL_v1_8000_crisis_information_poly.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_01DELINEATION_01DETAIL_v1_8000_hydrology_line.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_01DELINEATION_01DETAIL_v1_8000_hydrology_poly.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_01DELINEATION_01DETAIL_v1_8000_points_of_interest.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_01DELINEATION_01DETAIL_v1_8000_settlements_point.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_01DELINEATION_01DETAIL_v1_8000_transportation_line.geojson" />
+    <Content Include="JSON\EMSR092_01VARNA_01DELINEATION_01DETAIL_v1_8000_utilities_poly.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_00REFERENCE_00OVERVIEW_v1_15000_administrative_boundaries.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_00REFERENCE_00OVERVIEW_v1_15000_area_of_interest.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_00REFERENCE_00OVERVIEW_v1_15000_hydrology_line.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_00REFERENCE_00OVERVIEW_v1_15000_hydrology_poly.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_00REFERENCE_00OVERVIEW_v1_15000_points_of_interest.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_00REFERENCE_00OVERVIEW_v1_15000_settlements_point.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_00REFERENCE_00OVERVIEW_v1_15000_transportation_line.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_00REFERENCE_00OVERVIEW_v1_15000_transportation_point.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_00REFERENCE_00OVERVIEW_v1_15000_transportation_poly.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_00REFERENCE_00OVERVIEW_v1_15000_utilities_point.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_00REFERENCE_01DETAIL_v1_6000_area_of_interest.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_00REFERENCE_01DETAIL_v1_6000_hydrology_line.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_00REFERENCE_01DETAIL_v1_6000_hydrology_poly.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_00REFERENCE_01DETAIL_v1_6000_points_of_interest.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_00REFERENCE_01DETAIL_v1_6000_settlements_point.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_00REFERENCE_01DETAIL_v1_6000_transportation_line.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_01DELINEATION_00OVERVIEW_v1_15000_administrative_boundaries.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_01DELINEATION_00OVERVIEW_v1_15000_area_of_interest.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_01DELINEATION_00OVERVIEW_v1_15000_crisis_information_poly.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_01DELINEATION_00OVERVIEW_v1_15000_hydrology_line.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_01DELINEATION_00OVERVIEW_v1_15000_hydrology_poly.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_01DELINEATION_00OVERVIEW_v1_15000_points_of_interest.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_01DELINEATION_00OVERVIEW_v1_15000_settlements_point.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_01DELINEATION_00OVERVIEW_v1_15000_transportation_line.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_01DELINEATION_00OVERVIEW_v1_15000_transportation_point.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_01DELINEATION_00OVERVIEW_v1_15000_transportation_poly.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_01DELINEATION_00OVERVIEW_v1_15000_utilities_point.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_01DELINEATION_01DETAIL_v1_6000_area_of_interest.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_01DELINEATION_01DETAIL_v1_6000_crisis_information_poly.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_01DELINEATION_01DETAIL_v1_6000_hydrology_line.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_01DELINEATION_01DETAIL_v1_6000_hydrology_poly.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_01DELINEATION_01DETAIL_v1_6000_points_of_interest.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_01DELINEATION_01DETAIL_v1_6000_settlements_point.geojson" />
+    <Content Include="JSON\EMSR092_02DOBRIC_01DELINEATION_01DETAIL_v1_6000_transportation_line.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_00REFERENCE_00OVERVIEW_v1_12000_area_of_interest.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_00REFERENCE_00OVERVIEW_v1_12000_general_information_poly.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_00REFERENCE_00OVERVIEW_v1_12000_hydrology_line.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_00REFERENCE_00OVERVIEW_v1_12000_hydrology_poly.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_00REFERENCE_00OVERVIEW_v1_12000_settlements_point.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_00REFERENCE_00OVERVIEW_v1_12000_transportation_line.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_00REFERENCE_00OVERVIEW_v1_12000_utilities_poly.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_00REFERENCE_01DETAIL_v1_5000_area_of_interest.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_00REFERENCE_01DETAIL_v1_5000_general_information_poly.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_00REFERENCE_01DETAIL_v1_5000_hydrology_line.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_00REFERENCE_01DETAIL_v1_5000_settlements_point.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_00REFERENCE_01DETAIL_v1_5000_transportation_line.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_00REFERENCE_01DETAIL_v1_5000_utilities_poly.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_01DELINEATION_00OVERVIEW_v1_12000_area_of_interest.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_01DELINEATION_00OVERVIEW_v1_12000_crisis_information_point.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_01DELINEATION_00OVERVIEW_v1_12000_crisis_information_poly.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_01DELINEATION_00OVERVIEW_v1_12000_general_information_poly.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_01DELINEATION_00OVERVIEW_v1_12000_hydrology_line.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_01DELINEATION_00OVERVIEW_v1_12000_hydrology_poly.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_01DELINEATION_00OVERVIEW_v1_12000_settlements_point.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_01DELINEATION_00OVERVIEW_v1_12000_transportation_line.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_01DELINEATION_00OVERVIEW_v1_12000_utilities_poly.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_01DELINEATION_01DETAIL_v1_5000_area_of_interest.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_01DELINEATION_01DETAIL_v1_5000_crisis_information_point.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_01DELINEATION_01DETAIL_v1_5000_crisis_information_poly.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_01DELINEATION_01DETAIL_v1_5000_general_information_poly.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_01DELINEATION_01DETAIL_v1_5000_hydrology_line.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_01DELINEATION_01DETAIL_v1_5000_settlements_point.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_01DELINEATION_01DETAIL_v1_5000_transportation_line.geojson" />
+    <Content Include="JSON\EMSR092_03KILIFAREVO_01DELINEATION_01DETAIL_v1_5000_utilities_poly.geojson" />
+    <Content Include="JSON\indiastates1.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>17098</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:17098/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

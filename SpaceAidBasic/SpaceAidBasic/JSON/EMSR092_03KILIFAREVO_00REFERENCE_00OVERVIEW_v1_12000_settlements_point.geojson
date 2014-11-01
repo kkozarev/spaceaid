@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "src_date": "2014\/06\/12", "src_info": null, "act_id": "EMSR-092", "ext_scale": "10k", "nam": "Kilifarevo", "ext_date": "2014\/06\/20", "txt": "village", "subtype": "ZD040 - Named Location", "admin_lev": "populated place", "source_nam": "Open Street Map" }, "geometry": { "type": "Point", "coordinates": [ 25.626039803028171, 42.995978683227733 ] } }
+]
+}
