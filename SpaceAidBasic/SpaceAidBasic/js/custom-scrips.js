@@ -30,7 +30,7 @@ function scaledPoint(feature, latlng) {
 }
 
 // Request our data and add it to the earthquakesLayer.
-d3.json('../JSON/indiastates1.json', function (err, data) {
+d3.json("../JSON/earthQuakes.json", function ( data) {
     earthquakesLayer.addData(data);
     setBrush(data);
 });

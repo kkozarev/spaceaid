@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3 map projection</title>
+		<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="http://d3js.org/topojson.v1.min.js"></script>
+		<style type="text/css">
+			/* No style rules here yet */		
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+
+			//Width and height
+			var width = 1000;
+			var height = 600;
+
+			//Define quantize scale to sort data values into buckets of color
+			var color = d3.scale.linear()
+					.domain([10,80])
+					.range(["yellow","blue"]);
+		
+			//Create SVG element
+			var svg = d3.select("body")
+						.append("svg")
+						.attr("width", width)
+						.attr("height", height);
+
+			//Load in GeoJSON data
+			d3.json("EMSR092_01VARNA_01DELINEATION_00OVERVIEW_v1_16000_crisis_information_poly.geojson", function(json) {
+			
+			var center = d3.geo.centroid(json)
+      		var scale  = 500000;
+      		var offset = [width/2, height/2];
+			
+							//Define map projection
+			var projection = d3.geo.mercator()
+								   .translate([width/2, height/2])
+								   .scale(scale).center(center);	
+								   
+						//Define path generator
+			var path = d3.geo.path()
+							 .projection(projection);
+							 
+							 
+			d3.json("bg.json", function(error, bg) {
+  				svg.selectAll(".subunit")
+      				.data(topojson.feature(bg, bg.objects.subunits).features)
+    				.enter().append("path")
+      				.attr("class", function(d) { console.log("subunit " + d.id); 
+      						return "subunit " + d.id; })
+      				.attr("d", path);
+      				
+			
+				//Bind data and create one path per GeoJSON feature
+				svg.selectAll("path")
+				   .data(json.features)
+				   .enter()
+				   .append("path")
+				   .attr("d", path)
+				   .style("fill", function(d,i) {
+					   		//Get data value
+					   		console.log(color(i*10));
+					   		var value = 10+i*10;
+					   		if (value) {
+					   			//If value exists…
+						   		return color(value);
+					   		} else {
+					   			//If value is undefined…
+						   		return "#ccc";
+					   		}
+				});
+			});
+		});
+			
+		</script>
+	</body>
+</html>
