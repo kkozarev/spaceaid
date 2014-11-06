@@ -1,8 +1,0 @@
-{
-"type": "FeatureCollection",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-                                                                                
-"features": [
-{ "type": "Feature", "properties": { "src_date": "2014\/10\/21", "src_info": "Unk", "act_id": "EMSR092", "ext_scale": "5k", "nam": "Unk", "ext_date": "2014\/06\/20", "txt": "Unk", "subtype": "AC000 - Processing Facility", "admin_lev": null, "source_nam": "Pleiades - 0.5m pansharpened imagery" }, "geometry": { "type": "Point", "coordinates": [ 27.82330233899993, 43.595663010994521 ] } }
-]
-}

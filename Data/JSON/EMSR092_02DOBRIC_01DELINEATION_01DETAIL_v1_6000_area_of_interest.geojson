@@ -1,8 +1,0 @@
-{
-"type": "FeatureCollection",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-                                                                                
-"features": [
-{ "type": "Feature", "properties": { "act_id": "EMSR092", "name": "AOI02_Dobrich_DTL_6k", "subtype": "AOI" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 27.858717716999902, 43.550314763994564 ], [ 27.814409357999917, 43.55055326899452 ], [ 27.81471768199993, 43.577808837994588 ], [ 27.859044801999943, 43.577484341994484 ], [ 27.858717716999902, 43.550314763994564 ] ] ] } }
-]
-}

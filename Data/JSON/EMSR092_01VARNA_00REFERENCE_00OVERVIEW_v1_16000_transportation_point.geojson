@@ -1,9 +1,0 @@
-{
-"type": "FeatureCollection",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-                                                                                
-"features": [
-{ "type": "Feature", "properties": { "src_date": null, "src_info": null, "act_id": "EMSR-923", "ext_scale": "10k", "nam": "Graffiti Gallery", "ext_date": null, "txt": "cafe", "subtype": "AQ040 - Bridge", "admin_lev": "Unknown", "functional": "Fully Functional", "source_nam": "Open Street Map" }, "geometry": { "type": "Point", "coordinates": [ 27.921958296999918, 43.207528814994781 ] } },
-{ "type": "Feature", "properties": { "src_date": null, "src_info": null, "act_id": "EMSR-923", "ext_scale": "10k", "nam": null, "ext_date": null, "txt": "helipad", "subtype": "GB030 - Helipad", "admin_lev": "Unknown", "functional": "Fully Functional", "source_nam": "Open Street Map" }, "geometry": { "type": "Point", "coordinates": [ 27.875973015999907, 43.22189380199481 ] } }
-]
-}
