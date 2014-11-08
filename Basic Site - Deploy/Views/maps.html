@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -139,8 +139,8 @@ http://www.templatemo.com/preview/templatemo_417_grill
                             <div class="col-md-3 col-md-offset-1">
                                 <div class="side-bar">
                                     <div class="news-letters">
-                                        <h4>Archives</h4>
-                                        <div class="archives-list">
+                                        <h4>Select Layer</h4>
+                                     <!--   <div class="archives-list">
                                             <ul>
                                                 <li><a href="#"><i class="fa fa-angle-right"></i>July (12)</a></li>
                                                 <li><a href="#"><i class="fa fa-angle-right"></i>August (18)</a></li>
@@ -149,7 +149,23 @@ http://www.templatemo.com/preview/templatemo_417_grill
                                                 <li><a href="#"><i class="fa fa-angle-right"></i>November (48))</a></li>
                                                 <li><a href="#"><i class="fa fa-angle-right"></i>December (24)</a></li>
                                             </ul>
-                                        </div>
+											../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_points_of_interest.geojson",
+										../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_settlements_point.geojson",
+										../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_transportation_line.geojson",
+										../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_utilities_poly.geojson"];
+                                        </div>-->
+										
+										
+										
+										
+										<select id="ddlLayers" >
+										  <option value="../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_hydrology_line.geojson">Layer 1</option>
+										  <option value="../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_points_of_interest.geojson">Layer 2</option>
+										  <option value="../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_hydrology_poly.geojson">Layer 3</option>
+										  <option value="../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_settlements_point.geojson">Layer 4</option>
+										  <option value="../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_transportation_line.geojson">Layer 5</option>
+										  <option value="../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_utilities_poly.geojson">Layer 6</option>
+										</select>
                                     </div>
                                     
                                  
@@ -272,33 +288,45 @@ http://www.templatemo.com/preview/templatemo_417_grill
 
         </div>
     </footer>
-    <!--<iframe width='100%' height='500px' frameborder='0'
-            src='https://a.tiles.mapbox.com/v4/spaceaid.k03hjd0g/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1Ijoic3BhY2VhaWQiLCJhIjoiMVNQXzJyayJ9.zXReVNp_20W9Zk2BpwDBPQ'></iframe>-->
-			<script>
-				var maps = ["../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_hydrology_line.geojson",
-							"../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_hydrology_poly.geojson",
-							"../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_points_of_interest.geojson",
-							"../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_settlements_point.geojson",
-							"../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_transportation_line.geojson",
-							"../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_utilities_poly.geojson"];
-				
-				L.mapbox.accessToken = 'pk.eyJ1Ijoic3BhY2VhaWQiLCJhIjoiMVNQXzJyayJ9.zXReVNp_20W9Zk2BpwDBPQ';
-				for (var i = 0; i < maps.length; i++) {
-					var mapContainer = "map-" + i;
-					var mapbox = L.mapbox.map(mapContainer, 'spaceaid.k03hjd0g');
-					d3Initializer(i, mapbox);
-				}
-				
-				function d3Initializer(index, map) {
-					d3.json(maps[index], function(data) {
-						L.mapbox.featureLayer(data.features).addTo(map);
-					});
-				}
-			</script>
-    <script src="../js/vendor/jquery-1.11.0.min.js"></script>
+	    <script src="../js/vendor/jquery-1.11.0.min.js"></script>
     <script src="../js/vendor/jquery.gmap3.min.js"></script>
     <script src="../js/plugins.js"></script>
     <script src="../js/main.js"></script>
+    <!--<iframe width='100%' height='500px' frameborder='0'
+            src='https://a.tiles.mapbox.com/v4/spaceaid.k03hjd0g/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1Ijoic3BhY2VhaWQiLCJhIjoiMVNQXzJyayJ9.zXReVNp_20W9Zk2BpwDBPQ'></iframe>-->
+			<script>
+				//var maps = ["../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_hydrology_line.geojson",
+				//			"../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_hydrology_poly.geojson",
+				//			"../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_points_of_interest.geojson",
+				//			"../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_settlements_point.geojson",
+				//			"../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_transportation_line.geojson",
+				//			"../JSON/EMSR092_01VARNA_00REFERENCE_01DETAIL_v1_8000_utilities_poly.geojson"];
+				//
+				L.mapbox.accessToken = 'pk.eyJ1Ijoic3BhY2VhaWQiLCJhIjoiMVNQXzJyayJ9.zXReVNp_20W9Zk2BpwDBPQ';
+				var mapbox = L.mapbox.map("map-0", 'spaceaid.k03hjd0g');
+				
+				$("#ddlLayers").on("change",function(){
+					//mapbox.removeLayer()
+					var jsonValue  = $("#ddlLayers").val();
+					d3.json(jsonValue, function(data) {
+						L.mapbox.featureLayer(data.features).addTo(mapbox);
+					});
+					
+				});
+				
+			//	for (var i = 0; i < maps.length; i++) {
+			//		var mapContainer = "map-" + i;
+			//		var mapbox = L.mapbox.map(mapContainer, 'spaceaid.k03hjd0g');
+			//		d3Initializer(i, mapbox);
+			//	}
+			//	
+			//	function d3Initializer(index, map) {
+			//		d3.json(maps[index], function(data) {
+			//			L.mapbox.featureLayer(data.features).addTo(map);
+			//		});
+			//	}
+			</script>
+
 
 
 </body>
