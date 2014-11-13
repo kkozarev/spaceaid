@@ -1,0 +1,4 @@
+2 3 4 5 - Urban area
+10 - Artificial surfaces
+16 - Waterland
+30 - Road and rail networks and associated land

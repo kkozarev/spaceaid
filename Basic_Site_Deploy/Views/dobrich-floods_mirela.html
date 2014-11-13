@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<!-- templatemo 417 grill -->
+<!--
+Grill Template
+http://www.templatemo.com/preview/templatemo_417_grill
+-->
+<head>
+    <meta charset="utf-8">
+    <title>Space Aid Project</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" href="../css/templatemo_style.css">
+    <link rel="stylesheet" href="../css/templatemo_misc.css">
+    <link rel="stylesheet" href="../css/flexslider.css">
+    <link rel="stylesheet" href="../css/testimonails-slider.css">
+	 <link  href="../css/menu.css" rel="stylesheet">
+
+    <script src="../js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="http://d3js.org/topojson.v1.min.js"></script>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
+
+    <style>
+	
+    </style>
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+
+	
+		
+
+	
+	<header>	
+		<div class="container">
+				<div class="navbar navbar-static-top">
+					<div class="navigation">
+						<nav>
+						<ul class="nav topnav bold">
+							<li class="dropdown">
+							<a href="../index.html">Home </a>
+							</li>
+							<li class="dropdown active">
+							<a href="#">Visualizations <i class="icon-angle-down"></i></a>
+							<ul style="display: none;" class="dropdown-menu bold">
+								<li><a href="varna-floods.html">Varna</a></li>
+								<li><a href="dobrich-floods.html">Dobrich</a></li>
+								<li><a href="kilifarevo-floods.html">Kilifarevo</a></li>
+
+							
+							</ul>
+							</li>
+
+							
+							<li class="dropdown">
+							<a href="http://spaceaidproject.eu/blog/">Blog </a>
+						
+							</li>
+							<li>
+							<a href="http://spaceaidproject.eu/blog/?page_id=15">About us</a>
+							</li>
+						</ul>
+						</nav>
+					</div>
+					
+					<!-- end navigation -->
+				</div>
+			</div>
+			</div>
+		</div>
+	</header>	
+	
+    
+      
+       
+   
+    <div id="heading">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading-content">
+                        <h2>Dobrich flooded areas </h2>
+                        <span>Home / <a href="dobrich-floods.html">Dobrich</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="visualizaton-holder">
+        <div class="container">
+            <div class="row">
+                <div class="product-item col-md-12">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                               
+								<div id="map-holder">
+                                <div id="map-0" class="col-md-12 map-height-large dark"></div>
+								</div>
+                                <!--<div id='brush' class='ui-brush'></div>-->
+                            </div>
+                            <div class="col-md-3 col-md-offset-1">
+                                <div class="side-bar">
+                                    <div class="news-letters">
+                                        <h4>Select Single Layer</h4>
+                                    
+										
+										
+										<select id="ddlSinleLayer"  class="select_join" >
+										  <!--<option value="../JSON/Copernicus/Varna/VARNA_crisis_information_point.geojson">Layer 1</option>-->
+										  <option value="../JSON/Copernicus/Dobric/DOBRIC_crisis_information_poly.geojson">Main Flooded Areas</option>
+										  <option value="../JSON/Copernicus/Dobric/DOBRIC_hydrology_line.geojson">Layer 3</option>
+										  <option value="../JSON/Copernicus/Dobric/DOBRIC_hydrology_poly.geojson">Layer 4</option>
+										  <option value="../JSON/Copernicus/Dobric/DOBRIC_points_of_interest.geojson">Layer 5</option>
+										  <option value="../JSON/Copernicus/Dobric/DOBRIC_settlements_point.geojson">Layer 6</option>
+										  <option value="../JSON/Copernicus/Dobric/DOBRIC_transportation_line.geojson">Layer 7</option>
+										
+										</select>
+                                    </div>
+									
+                                     <div class="news-letters">
+                                        <h4>Select Multiple Layers</h4>
+                                    
+										
+										
+										<select id="ddlMultipleLayers"  class="select_join" >
+										  <!--<option value="../JSON/Copernicus/Varna/VARNA_crisis_information_point.geojson">Layer 1</option>-->
+										   <option value="../JSON/Copernicus/Dobric/DOBRIC_crisis_information_poly.geojson">Main Flooded Areas</option>
+										  <option value="../JSON/Copernicus/Dobric/DOBRIC_hydrology_line.geojson">Layer 3</option>
+										  <option value="../JSON/Copernicus/Dobric/DOBRIC_hydrology_poly.geojson">Layer 4</option>
+										  <option value="../JSON/Copernicus/Dobric/DOBRIC_points_of_interest.geojson">Layer 5</option>
+										  <option value="../JSON/Copernicus/Dobric/DOBRIC_settlements_point.geojson">Layer 6</option>
+										  <option value="../JSON/Copernicus/Dobric/DOBRIC_transportation_line.geojson">Layer 7</option>
+										
+										</select>
+                                    </div>
+                                 
+                                </div>
+								 <div class="side-bar">
+                                    <input type="button" class= "btn btn-primary btn-large" id="btnDeleteAllLayers" value="Remove all layers"/>
+                                    
+                                 
+                                </div>
+                            </div>
+                        </div>
+					
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="top-footer">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="subscribe-form">
+                            <span>Get in touch with us</span>
+                            <form method="get" class="subscribeForm">
+                                <input id="subscribe" type="text" />
+                                <input type="submit" id="submitButton" />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="social-bottom">
+                            <span>Follow us:</span>
+                            <ul>
+                                <li><a href="https://www.facebook.com/pages/The-Space-Aid-Project/381586521993059" class="fa fa-facebook"></a></li>
+                                <li><a href="https://twitter.com/Spaceaidproject" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-rss"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div class="main-footer">
+                <div class="row">
+                    <div class="col-md-3">
+                    
+                    </div>
+                    <div class="col-md-3">
+                        <div class="shop-list">
+                            <h4 class="footer-title">OPTIONS</h4>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Visualizations</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Warnings</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Blog</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>About</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="recent-posts">
+                            <h4 class="footer-title">Recent posts</h4>
+                            <div class="recent-post">
+                                <div class="recent-post-thumb">
+                                    <img src="../images/recent-post1.jpg" alt="">
+                                </div>
+                                <div class="recent-post-info">
+                                    <h6><a href="http://spaceaidproject.eu/blog/?p=38">A nice app for iPhone</a></h6>
+                                    <span>31/10/2014</span>
+                                </div>
+                            </div>
+                            <div class="recent-post">
+                                <div class="recent-post-thumb">
+                                    <img src="../images/recent-post2.jpg" alt="">
+                                </div>
+                                <div class="recent-post-info">
+                                    <h6><a href="http://spaceaidproject.eu/blog/?p=18">Our idea</a></h6>
+                                    <span>25/10/2014</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="more-info">
+                            <h4 class="footer-title">More info</h4>
+                            <p>Space Aid is a project of Space Challenges 2014.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-footer">
+                <p>Copyright � 2014 <a href="#">Space Aid</a> </p>
+            </div>
+
+        </div>
+    </footer>
+	    <script src="../js/vendor/jquery-1.11.0.min.js"></script>
+    <script src="../js/vendor/jquery.gmap3.min.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/jStorage.js"></script>
+	<script src="../js/menu.js"></script>
+	
+			<script>
+			
+				
+				var layer={};
+				var allLayers = [];
+				L.mapbox.accessToken = 'pk.eyJ1Ijoic3BhY2VhaWQiLCJhIjoiMVNQXzJyayJ9.zXReVNp_20W9Zk2BpwDBPQ';
+				var mapbox = L.mapbox.map("map-0", 'spaceaid.k41knmap').setView([43.5694709, 27.840094200000067], 12);
+
+				$("#ddlSinleLayer").on("change",function(){
+		    	mapbox.removeLayer(layer);
+				
+				
+					var jsonPath  = $("#ddlSinleLayer").val();
+					addLayer(jsonPath);
+					
+				});
+				
+					$("#ddlMultipleLayers").on("change",function(){
+
+					var jsonPath  = $("#ddlMultipleLayers").val();
+					addLayer(jsonPath);
+					
+				});
+				
+				
+				$("#btnDeleteAllLayers").on("click",function(){
+					for(i=0;i<allLayers.length;i++){
+						mapbox.removeLayer(allLayers[i]);
+					}
+				});
+				
+				function addLayer(jsonPath){
+					
+					d3.json(jsonPath, function(data) {
+                        layer =  L.mapbox.featureLayer().addTo(mapbox);
+
+
+                        //CASE MARKERS
+                        if(data.features[0].geometry.type=='Point'){
+                            for(i in data.features){
+                                data.features[i].properties['title']='Title'+i;
+                                data.features[i].properties['marker-color']='f11';
+                                data.features[i].properties['marker-size']='large';
+                                data.features[i].properties['marker-symbol']='star';
+                            }
+                        }
+
+                        layer.setGeoJSON(data);
+                        
+                        //case lines
+                        layer.setStyle({
+                            weight: 4,
+                            opacity: 1,
+                            color: '#00FF00',
+                            //dashArray: '3',//punktirano
+                            fillOpacity: 0.7,
+                            fillColor: '#FF0000'
+                        });
+
+                        allLayers.push(layer);
+						
+				    });
+				
+				}
+
+			</script>
+
+
+
+</body>
+</html>
