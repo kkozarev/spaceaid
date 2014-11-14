@@ -14,8 +14,6 @@ http://www.templatemo.com/preview/templatemo_417_grill
         <title>Spaceaid</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-       
-
 
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -25,7 +23,74 @@ http://www.templatemo.com/preview/templatemo_417_grill
         <link rel="stylesheet" href="css/templatemo_misc.css">
         <link rel="stylesheet" href="css/flexslider.css">
         <link rel="stylesheet" href="css/testimonails-slider.css">
-		 <link  href="css/menu.css" rel="stylesheet">
+		<link  href="css/menu.css" rel="stylesheet">
+		
+		<style>
+			.forecast {
+				display: none;
+			}
+			
+			#weather-alert {
+				width: 100%;
+				height: 20px;
+				background: red;
+				display: none;
+			}
+			
+			.forecast #forecast-header,
+			.forecast .forecast-title {
+				text-align: center;
+				font-weight: bold;
+			}
+			
+			/*
+			<!-- Add these! -->
+			.forecast .clear-day {
+				background-image: url('');
+			}
+			
+			.forecast .clear-night {
+				background-image: url('');
+			}
+			
+			.forecast .rain {
+				background-image: url('');
+			}
+			
+			.forecast .snow {
+				background-image: url('');
+			}
+			
+			.forecast .sleet {
+				background-image: url('');
+			}
+			
+			.forecast .wind {
+				background-image: url('');
+			}
+			
+			.forecast .fog {
+				background-image: url('');
+			}
+			
+			.forecast .cloudy {
+				background-image: url('');
+			}
+			
+			.forecast .partly-cloudy-day {
+				background-image: url('');
+			}
+			
+			.forecast .partly-cloudy-night {
+				background-image: url('');
+			}
+			*/
+			
+			/*
+			.forecast div {
+				text-align: left;
+			} */
+		</style>
 
         <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
         <script src="js/vendor/d3.js"></script>
@@ -37,8 +102,8 @@ http://www.templatemo.com/preview/templatemo_417_grill
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
-
-            <header>	
+		<div id="weather-alert"></div>
+        <header>	
 		<div class="container">
 				<div class="navbar navbar-static-top">
 					<div class="navigation">
@@ -116,17 +181,60 @@ http://www.templatemo.com/preview/templatemo_417_grill
                 </div>
             </div>
 
-
+			
             <div id="services">
                 <div class="container">
-                    <div class="row">
+                    <!--<div class="row">
                         <div class="col-md-12">
                             <div class="heading-section">
                                 <h2>Space challenges program</h2>
                                 <img src="images/under-heading.png" alt="" >
                             </div>
                         </div>
+                    </div>-->
+					<!-- #startregion forecast -->
+					<div class="row forecast">
+                        <div class="col-md-12">
+                            <div class="heading-section">
+                                <h2 id="forecast-header">The weather</h2>
+                            </div>
+                        </div>
                     </div>
+					<div class="row forecast" id="forecast-now">
+                        <div class="col-md-3 col-sm-6">
+							<div class="service-item">
+								<div class="forecast-title">Right now</div>
+								<div id="forecast-icon"></div>
+								<div id="forecast-temperature">Temperature: </div>
+								<div id="forecast-temperature-feel">Feels like: </div>
+								<div id="forecast-temperature-summary"></div>
+							</div>
+                        </div>
+						<div class="col-md-3 col-sm-6">
+							<div class="service-item">
+								<div class="forecast-title">More info</div>
+								<div id="forecast-rain">Probable rain volume: </div>
+								<div id="forecast-humidity">Humidity: </div>
+								<div id="forecast-dew">Dew point: </div>
+								<div id="forecast-wind">Wind speed: </div>
+								<div id="forecast-pressure">Pressure: </div>
+							</div>
+                        </div>
+						<div class="col-md-3 col-sm-6">
+							<div class="service-item">
+								<div class="forecast-title">Next hour</div>
+								<div id="forecast-hour"></div>
+							</div>
+                        </div>
+						<div class="col-md-3 col-sm-6">
+							<div class="service-item">
+								<div class="forecast-title">Next week</div>
+								<div id="forecast-week"></div>
+							</div>
+                        </div>
+                    </div>
+				<!-- #endregion forecast -->
+				<!--
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
                             <div class="service-item">
@@ -166,11 +274,7 @@ http://www.templatemo.com/preview/templatemo_417_grill
                         </div>
                     </div>
                 </div>
-            </div>
-
-
-
-
+            </div>-->
 
             <div id="latest-blog">
                 <div class="container">
@@ -431,6 +535,98 @@ http://www.templatemo.com/preview/templatemo_417_grill
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 		<script src="js/menu.js"></script>
+		<script>
+			var forecastUrl = "http://forecastapi.apphb.com/api/forecast?";
+			
+			function getLocation() {
+				if(navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(function(position) {
+						//var time = new Date().getTime();
+						forecastUrl = forecastUrl + "latitude=" + position.coords.latitude + "&longitude=" + position.coords.longitude;
+						getForecast(forecastUrl);
+					});
+				}
+				else {
+					console.log("Geolocation not supported");
+				}
+			}
+			
+			function getForecast(url) {
+				d3.json(url, function(data) {
+					var dataJson = JSON.parse(data);
+					console.log(dataJson);
+					
+					//Check for alerts
+					if (dataJson.alerts != undefined) {
+						var alertDiv = document.getElementById("weather-alert");
+						alertDiv.innerHTML += dataJson.alerts[0].title + " - ";
+						alertDiv.innerHTML += dataJson.alerts[0].description;
+						alertDiv.innerHTML += " - Check out more info here - " + dataJson[0].uri;
+						
+						alertDiv.style.display = "block";
+					}
+			
+					var forecastElements = document.getElementsByClassName("forecast");
+					
+					for (var i = 0; i < forecastElements.length; i++) {
+						forecastElements[i].style.display = "block";
+					}
+					
+					var forecastHolder = document.getElementById("forecast-header");
+					forecastHolder.innerHTML += " in " + dataJson.timezone;
+					
+					var forecastIcon = document.getElementById("forecast-icon");
+					forecastIcon.className += dataJson.currently.icon;
+					
+					var forecastTemp = document.getElementById("forecast-temperature");
+					forecastTemp.innerHTML += dataJson.currently.temperature + " Fahrenheit";
+					
+					var forecastTempFeels = document.getElementById("forecast-temperature-feel");
+					forecastTempFeels.innerHTML += dataJson.currently.apparentTemperature + " Fahrenheit";
+					
+					var forecastSummary = document.getElementById("forecast-temperature-summary");
+					forecastSummary.innerHTML += dataJson.currently.summary;
+					
+					var forecastRain = document.getElementById("forecast-rain");
+					//These values are referenced in the forecast documentation - 0.4 means heavy rain, 0.1 - moderate, etc.
+					if (dataJson.currently.precipIntensity >= 0.4) {
+						forecastRain.innerHTML += "Heavy - " + dataJson.currently.precipIntensity + " in./hr.";
+					}
+					else if (dataJson.currently.precipIntensity >= 0.1) {
+						forecastRain.innerHTML += "Moderate - " + dataJson.currently.precipIntensity + " in./hr.";
+					}
+					else if (dataJson.currently.precipIntensity >= 0.017) {
+						forecastRain.innerHTML += "Light - " + dataJson.currently.precipIntensity + " in./hr.";
+					}
+					else if (dataJson.currently.precipIntensity >= 0.002) {
+						forecastRain.innerHTML += "Very light - " + dataJson.currently.precipIntensity + " in./hr.";
+					}
+					else {
+						forecastRain.innerHTML += "None - " + dataJson.currently.precipIntensity + " in./hr.";
+					}
+
+					var forecastHumidity = document.getElementById("forecast-humidity");
+					forecastHumidity.innerHTML += (dataJson.currently.humidity * 100) + " %";
+					
+					var forecastDew = document.getElementById("forecast-dew");
+					forecastDew.innerHTML += dataJson.currently.dewPoint;
+					
+					var forecastWind = document.getElementById("forecast-wind");
+					forecastWind += dataJson.currently.windSpeed + " mph";
+					
+					var forecastPressure = document.getElementById("forecast-pressure");
+					forecastPressure.innerHTML += dataJson.currently.pressure;
+					
+					var forecastHourly = document.getElementById("forecast-hour");
+					forecastHourly.innerHTML += dataJson.hourly.summary;
+					
+					var forecastWeek = document.getElementById("forecast-week");
+					forecastWeek.innerHTML += dataJson.daily.summary;
+				});
+			}
+			
+			getLocation();
+		</script>
 
     </body>
 </html>
