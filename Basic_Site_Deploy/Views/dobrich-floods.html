@@ -125,14 +125,14 @@ http://www.templatemo.com/preview/templatemo_417_grill
 										
 										
 										<select id="ddlSinleLayer"  class="select_join" >
-										  <!--<option value="../JSON/Copernicus/Varna/VARNA_crisis_information_point.geojson">Layer 1</option>-->
-										  <option value="../JSON/Copernicus/Dobric/DOBRIC_crisis_information_poly.geojson">Main Flooded Areas</option>
-										  <option value="../JSON/Copernicus/Dobric/DOBRIC_hydrology_line.geojson">Layer 3</option>
-										  <option value="../JSON/Copernicus/Dobric/DOBRIC_hydrology_poly.geojson">Layer 4</option>
-										  <option value="../JSON/Copernicus/Dobric/DOBRIC_points_of_interest.geojson">Layer 5</option>
-										  <option value="../JSON/Copernicus/Dobric/DOBRIC_settlements_point.geojson">Layer 6</option>
-										  <option value="../JSON/Copernicus/Dobric/DOBRIC_transportation_line.geojson">Layer 7</option>
-										
+										  <option index="land_cover_corine" value="../JSON/Land_Cover_Corine/Dobric/DOB_Zone.geojson">Land Cover</option>
+										  <option index="crisis_info_poly" value="../JSON/Copernicus/Dobric/DOBRIC_crisis_information_poly.geojson">Main Flooded Areas</option>
+										  <option index="crisis_info_pt" value="../JSON/Copernicus/Dobric/DOBRIC_crisis_information_point.geojson">Flooded Locations</option>
+										  <option index="hydro_poly" value="../JSON/Copernicus/Dobric/DOBRIC_hydrology_poly.geojson">Hydrology Polygons</option>
+										  <option index="pt_interest" value="../JSON/Copernicus/Dobric/DOBRIC_points_of_interest.geojson">Points of Interest</option>
+										  <option index="settle_pt" value="../JSON/Copernicus/Dobric/DOBRIC_settlements_point.geojson">Settlement Points</option>
+										  <option index="trans_line" value="../JSON/Copernicus/Dobric/DOBRIC_transportation_line.geojson">Street Grid</option>
+										  <option index="util_poly" value="../JSON/Copernicus/Dobric/DOBRIC_utilities_poly.geojson">Utilities Points</option>
 										</select>
                                     </div>
 									
@@ -142,13 +142,14 @@ http://www.templatemo.com/preview/templatemo_417_grill
 										
 										
 										<select id="ddlMultipleLayers"  class="select_join" >
-										  <!--<option value="../JSON/Copernicus/Varna/VARNA_crisis_information_point.geojson">Layer 1</option>-->
-										   <option value="../JSON/Copernicus/Dobric/DOBRIC_crisis_information_poly.geojson">Main Flooded Areas</option>
-										  <option value="../JSON/Copernicus/Dobric/DOBRIC_hydrology_line.geojson">Layer 3</option>
-										  <option value="../JSON/Copernicus/Dobric/DOBRIC_hydrology_poly.geojson">Layer 4</option>
-										  <option value="../JSON/Copernicus/Dobric/DOBRIC_points_of_interest.geojson">Layer 5</option>
-										  <option value="../JSON/Copernicus/Dobric/DOBRIC_settlements_point.geojson">Layer 6</option>
-										  <option value="../JSON/Copernicus/Dobric/DOBRIC_transportation_line.geojson">Layer 7</option>
+										  <option index="land_cover_corine" value="../JSON/Land_Cover_Corine/Dobric/DOB_Zone.geojson">Land Cover</option>
+										  <option index="crisis_info_poly" value="../JSON/Copernicus/Dobric/DOBRIC_crisis_information_poly.geojson">Main Flooded Areas</option>
+										  <option index="crisis_info_pt" value="../JSON/Copernicus/Dobric/DOBRIC_crisis_information_point.geojson">Flooded Locations</option>
+										  <option index="hydro_poly" value="../JSON/Copernicus/Dobric/DOBRIC_hydrology_poly.geojson">Hydrology Polygons</option>
+										  <option index="pt_interest" value="../JSON/Copernicus/Dobric/DOBRIC_points_of_interest.geojson">Points of Interest</option>
+										  <option index="settle_pt" value="../JSON/Copernicus/Dobric/DOBRIC_settlements_point.geojson">Settlement Points</option>
+										  <option index="trans_line" value="../JSON/Copernicus/Dobric/DOBRIC_transportation_line.geojson">Street Grid</option>
+										  <option index="util_poly" value="../JSON/Copernicus/Dobric/DOBRIC_utilities_poly.geojson">Utilities Points</option>
 										
 										</select>
                                     </div>
@@ -285,13 +286,107 @@ http://www.templatemo.com/preview/templatemo_417_grill
 					}
 				});
 				
-				function addLayer(jsonPath){
+				//===========================================================================
+//Function to load each layer
+				function addLayer(jsonPath,jsonIndex){
 					
 					d3.json(jsonPath, function(data) {
-						  layer =	L.mapbox.featureLayer(data.features).addTo(mapbox);
+						  layer =L.mapbox.featureLayer().addTo(mapbox)
+						  	.on('layeradd', function(e) {
+								var marker = e.layer;
+								console.log(marker);
+								console.log(marker.feature.geometry.type);
+
+
+var lineColor='';
+var fillColor='';
+//----------------------------------					
+//Setting the style of POINT objects
+								if (marker.feature.geometry.type == 'Point'){
+									switch(jsonIndex) {
+										case 'crisis_info_pt':
+											color='#ff8888';
+											break;
+										case 'pt_interest':
+											color='#75ad3e'
+											break;
+										case 'settle_pt':
+											color='#03c6ff'
+											break;
+									}
+									marker.setIcon(L.mapbox.marker.icon({
+										'marker-color': color,
+										'marker-size': 'large'
+									}));
+									console.log(marker.feature.geometry.type);	
+								}
+//----------------------------------	
+
+
+
+//------------------------------------	
+//Setting the style of POLYGON objects								
+								if (marker.feature.geometry.type == 'Polygon'){
+									console.log(L.mapbox);
+									switch(jsonIndex) {
+										case 'land_cover_corine':
+											lineColor='#ffdb00';
+											fillColor='#ff8888';
+											break;
+										case 'crisis_info_poly':
+											lineColor='#ff8888';
+											fillColor='#75ad3e';
+											break;
+										case 'hydro_poly':
+											lineColor='#75ad3e';
+											fillColor='#03c6ff';
+											break;
+										case 'util_poly':
+											lineColor='#03c6ff';
+											fillColor='#ffdb00';
+											break;
+									}
+									
+                     			 	layer.setStyle({
+                            			weight: 4,
+                            			opacity: 0.8,
+                            			color: lineColor,
+                            			//dashArray: '3',//punktirano
+                           				fillOpacity: 0.6,
+                          				fillColor: fillColor
+                       			 	});
+                       			 	console.log(marker.feature.geometry.type);
+								}
+//-------------------------------								
+
+
+
+//------------------------------------	
+//Setting the style of LINESTRING objects								
+								if (marker.feature.geometry.type == 'LineString'){
+									console.log(L.mapbox);
+									switch(jsonIndex) {
+										case 'trans_line':
+											lineColor='#03c6ff';
+											fillColor='#ffdb00';
+											break;
+									}
+									
+                     			 	layer.setStyle({
+                            			weight: 4,
+                            			opacity: 0.6,
+                            			color: lineColor,
+                            			//dashArray: '3',//punktirano
+                            			fillOpacity: 0.6,
+                          				fillColor: fillColor
+                       			 	});
+								}
+//-------------------------------
+									
+							})//END .on('layeradd')
 							allLayers.push(layer);
-						
-						
+							layer.setGeoJSON(data.features);
+				
 					});
 				
 				}
