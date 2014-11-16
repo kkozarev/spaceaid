@@ -26,9 +26,27 @@ http://www.templatemo.com/preview/templatemo_417_grill
 		<link  href="css/menu.css" rel="stylesheet">
 		
 		<style>
-			.forecast {
+		
+		.not-visible{
+			display:none;
+		}
+		
+		.visible{
+			display:block;
+		}
+		
+		#forecast-temperature-summary
+		{
+		  
+			display:inline-block;
+			font-size:22px;
+			font-family: 'Unlock';
+			font-weight:bold;
+			padding-top:10px;
+		}
+			/*.forecast {
 				display: none;
-			}
+			} */
 			
 			#weather-alert {
 				width: 100%;
@@ -43,48 +61,64 @@ http://www.templatemo.com/preview/templatemo_417_grill
 				font-weight: bold;
 			}
 			
-			/*
+			#forecast-icon,#forecast-temperature-summary
+			{
+				
+				height:50px;
+			}
+			
 			<!-- Add these! -->
 			.forecast .clear-day {
-				background-image: url('');
+				background-image: url('images/clear-day.png') center no-repeat;
+				background-position: center; 
 			}
 			
 			.forecast .clear-night {
-				background-image: url('');
+				background: url('images/clear-night.png') center no-repeat;
+				
 			}
 			
 			.forecast .rain {
-				background-image: url('');
+				background: url('images/rain.png') center no-repeat ;
+				
+			
 			}
 			
 			.forecast .snow {
-				background-image: url('');
+				background: url('images/snow.png') center no-repeat;
+				
 			}
 			
 			.forecast .sleet {
-				background-image: url('');
+				background: url('images/sleet.png') center no-repeat;
+				
 			}
 			
 			.forecast .wind {
-				background-image: url('');
+				background: url('images/wind.png') center no-repeat;
+				
 			}
 			
 			.forecast .fog {
-				background-image: url('');
+				background: url('images/fog.png') center no-repeat;
+				 
 			}
 			
 			.forecast .cloudy {
-				background-image: url('');
+				background: url('images/cloudy.png') center no-repeat;
+				 
 			}
 			
 			.forecast .partly-cloudy-day {
-				background-image: url('');
+				background: url('images/partly-cloudy-day.png') center no-repeat;
+				
 			}
 			
 			.forecast .partly-cloudy-night {
-				background-image: url('');
+				background: url('images/partly-cloudy-night.png') center no-repeat;
+				
 			}
-			*/
+			
 			
 			/*
 			.forecast div {
@@ -110,7 +144,7 @@ http://www.templatemo.com/preview/templatemo_417_grill
 						<nav>
 						<ul class="nav topnav bold">
 							<li class="dropdown active">
-							<a href="../index.html">Home </a>
+							<a href="#">Home </a>
 							</li>
 							<li class="dropdown">
 							<a href="#">Visualizations <i class="icon-angle-down"></i></a>
@@ -140,8 +174,7 @@ http://www.templatemo.com/preview/templatemo_417_grill
 					<!-- end navigation -->
 				</div>
 			</div>
-			</div>
-		</div>
+			
 	</header>	
 
             <div id="slider">
@@ -184,159 +217,94 @@ http://www.templatemo.com/preview/templatemo_417_grill
 			
             <div id="services">
                 <div class="container">
-                    <!--<div class="row">
-                        <div class="col-md-12">
-                            <div class="heading-section">
-                                <h2>Space challenges program</h2>
-                                <img src="images/under-heading.png" alt="" >
-                            </div>
-                        </div>
-                    </div>-->
+                  
 					<!-- #startregion forecast -->
 					<div class="row forecast">
                         <div class="col-md-12">
                             <div class="heading-section">
                                 <h2 id="forecast-header">The weather</h2>
+								<img src="images/under-heading.png" alt="" >
                             </div>
                         </div>
                     </div>
 					<div class="row forecast" id="forecast-now">
                         <div class="col-md-3 col-sm-6">
 							<div class="service-item">
-								<div class="forecast-title">Right now</div>
-								<div id="forecast-icon"></div>
-								<div id="forecast-temperature">Temperature: </div>
-								<div id="forecast-temperature-feel">Feels like: </div>
+								<div class="forecast-title bg-info">Right now</div>
+								<div id="forecast-icon" ></div>
+								<div id="forecast-temperature-celsius"><i>Temperature</i> : </div>
+								<div id="forecast-temperature"><i>Temperature</i> : </div>
+								<div id="forecast-temperature-feel"><i>Feels like</i> : </div>
 								<div id="forecast-temperature-summary"></div>
 							</div>
                         </div>
 						<div class="col-md-3 col-sm-6">
 							<div class="service-item">
-								<div class="forecast-title">More info</div>
-								<div id="forecast-rain">Probable rain volume: </div>
-								<div id="forecast-humidity">Humidity: </div>
-								<div id="forecast-dew">Dew point: </div>
-								<div id="forecast-wind">Wind speed: </div>
-								<div id="forecast-pressure">Pressure: </div>
+								<div class="forecast-title bg-info">More info</div>
+								<div id="forecast-rain"><i>Probable rain volume</i> : </div>
+								<div id="forecast-humidity"><i>Humidity</i> : </div>
+								<div id="forecast-dew"><i>Dew point</i> : </div>
+								<div id="forecast-wind"><i>Wind speed</i> : </div>
+								<div id="forecast-pressure"><i>Pressure</i> : </div>
 							</div>
                         </div>
 						<div class="col-md-3 col-sm-6">
 							<div class="service-item">
-								<div class="forecast-title">Next hour</div>
+								<div class="forecast-title bg-info">Next hour</div>
 								<div id="forecast-hour"></div>
 							</div>
                         </div>
 						<div class="col-md-3 col-sm-6">
 							<div class="service-item">
-								<div class="forecast-title">Next week</div>
+								<div class="forecast-title bg-info">Next week</div>
 								<div id="forecast-week"></div>
 							</div>
                         </div>
                     </div>
-				<!-- #endregion forecast -->
-				<!--
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <div class="icon">
-                                    <i class="fa fa-pencil"></i>
-                                </div>
-                                <h4>Our idea</h4>
-                                <p></p>
-                            </div>
+				<!--  <div id="warning-panel" class="row not-visible">
+                        <div class="col-md-12">
+                            <div class="heading-section">-->
+							
+							<div id="success-panel" class="alert alert-success alert-dismissible not-visible" role="alert">	
+									  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+									  <strong>Warning! </strong><div id="warning-text" style="display:inline-block"> </div>
+									</div>
+									<div id="warning-panel2" class="alert alert-warning alert-dismissible not-visible" role="alert">	
+									  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+									  <strong>Warning! </strong>It's hot out there.Get a hat for the sun!</div>
+                               		<div id="warning-panel1" class="alert alert-warning alert-dismissible not-visible" role="alert">	
+									  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+									  <strong>Warning! </strong>It's cold out there. Put on warm clothes!</div>
+									
+									
+									<div id="danger-panel1" class="alert alert-danger alert-dismissible not-visible" role="alert">	
+									  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+									  <strong>Warning! </strong>It's very cold out there. There might be frozen areas. Put on warm clothes!</div>
+									
+									<div id="danger-panel2" class="alert alert-danger alert-dismissible not-visible" role="alert">	
+									  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+									  <strong>Warning! </strong>It's raining out there.Get an umbrella! </div>
+									
+                           <!-- </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <div class="icon">
-                                    <i class="fa fa-bullhorn"></i>
-                                </div>
-                                <h4>Visualizations</h4>
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <div class="icon">
-                                    <i class="fa fa-bell"></i>
-                                </div>
-                                <h4>Remote data</h4>
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <div class="icon">
-                                    <i class="fa fa-heart"></i>
-                                </div>
-                                <h4>Copernicus</h4>
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
+                    </div>-->
+			
+					
+				</div>
+				</div>
+		
+				
 
             <div id="latest-blog">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="heading-section">
-                                <h2>Latest blog posts</h2>
-                              
+                                <h2>Flood visualizations</h2>
                                 <img src="images/under-heading.png" alt="" >
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="blog-post">
-                                <div class="blog-thumb">
-                                    
-                                    <img src="images/flood1.jpg" alt="" />
-                                </div>
-                                <div class="blog-content">
-                                    <div class="content-show">
-                                        <h4><a href="single-post.html">Why happens</a></h4>
-                                        <span></span>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="blog-post">
-                                <div class="blog-thumb">
-                                    <img src="images/flood2.jpg" alt="" />
-                                </div>
-                                <div class="blog-content">
-                                    <div class="content-show">
-                                        <h4><a href="single-post.html">Could people be warned</a></h4>
-                                        <span></span>
-                                    
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="blog-post">
-                                <div class="blog-thumb">
-                                    <img src="images/flood3.jpg" alt="" />
-                                </div>
-                                <div class="blog-content">
-                                    <div class="content-show">
-                                        <h4><a href="single-post.html">Could be avoided</a></h4>
-                                        <span></span>
-                                    </div>
-                                   <!-- <div class="content-hide">
-                                        <p></p>
-                                    </div>-->
-                                </div>
-                            </div>
-                        </div>
-						</div>
-						
-								
-								
 						
 						<div class="row">
                         <div class="col-md-4 col-sm-6">
@@ -391,12 +359,6 @@ http://www.templatemo.com/preview/templatemo_417_grill
                 </div>
             </div>
 
-        <!--<div id="map" class="col-md-4 recent-post-thumb"></div>
-        <script type="text/javascript">
-            L.mapbox.accessToken = 'pk.eyJ1Ijoic3BhY2VhaWQiLCJhIjoiMVNQXzJyayJ9.zXReVNp_20W9Zk2BpwDBPQ';
-            var map = L.mapbox.map('map', 'spaceaid.k03hjd0g')
-                .setView([43.278, 27.987], 9);
-        </script>-->
 
             <div id="testimonails">
                 <div class="container">
@@ -408,29 +370,46 @@ http://www.templatemo.com/preview/templatemo_417_grill
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                            <div class="testimonails-slider">
-                              <ul class="slides">
-                                <li>
-                                    <div class="testimonails-content">
-                                        <p>...............</p>
-                                        <h6>Jennifer - <a href="#">Chief Designer</a></h6>
+                   	<div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/android.png" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4>Android application</h4>
+                                        <span></span>
                                     </div>
-                                </li>
-                                <li>
-                                    <div class="testimonails-content">
-                                        <p>......</p>
-                                        <h6>Laureen - <a href="#">Marketing Executive</a></h6>
-                                    </div> 
-                                </li>
-                                <li>
-                                    <div class="testimonails-content">
-                                        <p>.........</p>
-                                        <h6>Tanya - <a href="#">Creative Director</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/ios.png" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4>IOS Application</h4>
+                                        <span></span>
                                     </div>
-                                </li>
-                              </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/wp.png" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4>Windows Phone Application</h4>
+                                        <span></span>
+                                    </div>
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -439,104 +418,29 @@ http://www.templatemo.com/preview/templatemo_417_grill
 
 			<footer>
                 <div class="container">
-                    <div class="top-footer">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <div class="subscribe-form">
-                                    <span>Get in touch with us</span>
-                                    <form method="get" class="subscribeForm">
-                                        <input id="subscribe" type="text" />
-                                        <input type="submit" id="submitButton" />
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="social-bottom">
-                                  
-                                    <ul>
-                                        <li><a href="#" class="fa fa-facebook"></a></li>
-                                        <li><a href="#" class="fa fa-twitter"></a></li>
-                                        <li><a href="#" class="fa fa-rss"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main-footer">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="about">
-                                    <h4 class="footer-title">About Spaceaid</h4>
-                                   
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="shop-list">
-                                    <h4 class="footer-title">Space AID</h4>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-angle-right"></i>Visualizations</a></li>
-                                        <li><a href="#"><i class="fa fa-angle-right"></i>Visualizations</a></li>
-                                        <li><a href="#"><i class="fa fa-angle-right"></i>Visualizations</a></li>
-                                        <li><a href="#"><i class="fa fa-angle-right"></i>Visualizations</a></li>
-                                        <li><a href="#"><i class="fa fa-angle-right"></i>Visualizations</a></li>
-                                        <li><a href="#"><i class="fa fa-angle-right"></i>Visualizations</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="recent-posts">
-                                    <h4 class="footer-title">Recent posts</h4>
-                                    <div class="recent-post">
-                                        <div class="recent-post-thumb">
-                                            <img src="images/recent-post1.jpg" alt="">
-                                        </div>
-                                        <div class="recent-post-info">
-                                            <h6><a href="#">Heavy rains</h6>
-                                            <span>24/12/2084</span>
-                                        </div>
-                                    </div>
-                                    <div class="recent-post">
-                                        <div class="recent-post-thumb">
-                                            <img src="images/recent-post2.jpg" alt="">
-                                        </div>
-                                        <div class="recent-post-info">
-                                            <h6><a href="#">Heavy snow</a></h6>
-                                            <span>18/12/2084</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="more-info">
-                                    <h4 class="footer-title">More info</h4>
-                                    <p>Sed dignissim, diam id molestie faucibus, purus nisl pretium quam, in pulvinar velit massa id elit.</p>
-                                    <ul>
-                                        <li><i class="fa fa-phone"></i>010-020-0340</li>
-                                        <li><i class="fa fa-globe"></i>123 Dagon Studio, Yakin Street, Digital Estate</li>
-                                        <li><i class="fa fa-envelope"></i><a href="#">info@company.com</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                 
                     <div class="bottom-footer">
-                        <p>Copyright © 2014 <a href="#">Spaceaid team</a> <!-- Credit: www.templatemo.com --></p>
+                        <p>Copyright © 2014 <a href="#">Spaceaid team</a> </p>
                     </div>
                     
                 </div>
             </footer>
-        <!--<iframe width='100%' height='500px' frameborder='0' 
-                src='https://a.tiles.mapbox.com/v4/spaceaid.k03hjd0g/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1Ijoic3BhY2VhaWQiLCJhIjoiMVNQXzJyayJ9.zXReVNp_20W9Zk2BpwDBPQ'></iframe>-->
-    
+   
        
 
+	
         <script src="js/vendor/jquery-1.11.0.min.js"></script>
         <script src="js/vendor/jquery.gmap3.min.js"></script>
+		<script src="js/bootstrap.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 		<script src="js/menu.js"></script>
 		<script>
 			var forecastUrl = "http://forecastapi.apphb.com/api/forecast?";
+			var temperatureInCelsius= 0;
+			var summary ="";
+			
+			var isVeryCold = false;
 			
 			function getLocation() {
 				if(navigator.geolocation) {
@@ -544,6 +448,7 @@ http://www.templatemo.com/preview/templatemo_417_grill
 						//var time = new Date().getTime();
 						forecastUrl = forecastUrl + "latitude=" + position.coords.latitude + "&longitude=" + position.coords.longitude;
 						getForecast(forecastUrl);
+						
 					});
 				}
 				else {
@@ -576,56 +481,101 @@ http://www.templatemo.com/preview/templatemo_417_grill
 					forecastHolder.innerHTML += " in " + dataJson.timezone;
 					
 					var forecastIcon = document.getElementById("forecast-icon");
-					forecastIcon.className += dataJson.currently.icon;
+					forecastIcon.className += " " +dataJson.currently.icon;
+					
+					
+					var forecastTempCelsius = document.getElementById("forecast-temperature-celsius");
+					var temp = (((parseInt(dataJson.currently.temperature)- 32)*5)/9 ).toFixed(2);
+					temperatureInCelsius = temp;
+					forecastTempCelsius.innerHTML += "<b><span class='badge'>" + temp + "</span> Celsius </b>";
 					
 					var forecastTemp = document.getElementById("forecast-temperature");
-					forecastTemp.innerHTML += dataJson.currently.temperature + " Fahrenheit";
+					forecastTemp.innerHTML += "<b><span class='badge'>" +dataJson.currently.temperature + "</span> Fahrenheit </b>";
 					
 					var forecastTempFeels = document.getElementById("forecast-temperature-feel");
-					forecastTempFeels.innerHTML += dataJson.currently.apparentTemperature + " Fahrenheit";
+					forecastTempFeels.innerHTML += "<b><span class='badge'>" +dataJson.currently.apparentTemperature +  "</span>  Fahrenheit";
 					
 					var forecastSummary = document.getElementById("forecast-temperature-summary");
 					forecastSummary.innerHTML += dataJson.currently.summary;
+					summary = dataJson.currently.summary.toLowerCase();
+					//forecastSummary.className += dataJson.currently.icon;
 					
 					var forecastRain = document.getElementById("forecast-rain");
 					//These values are referenced in the forecast documentation - 0.4 means heavy rain, 0.1 - moderate, etc.
 					if (dataJson.currently.precipIntensity >= 0.4) {
-						forecastRain.innerHTML += "Heavy - " + dataJson.currently.precipIntensity + " in./hr.";
+						forecastRain.innerHTML += "<b>Heavy - " + dataJson.currently.precipIntensity + " in./hr. </b>";
 					}
 					else if (dataJson.currently.precipIntensity >= 0.1) {
-						forecastRain.innerHTML += "Moderate - " + dataJson.currently.precipIntensity + " in./hr.";
+						forecastRain.innerHTML += "<b>Moderate - " + dataJson.currently.precipIntensity + " in./hr. </b>";
 					}
 					else if (dataJson.currently.precipIntensity >= 0.017) {
-						forecastRain.innerHTML += "Light - " + dataJson.currently.precipIntensity + " in./hr.";
+						forecastRain.innerHTML += "<b>Light - " + dataJson.currently.precipIntensity + " in./hr. </b>";
 					}
 					else if (dataJson.currently.precipIntensity >= 0.002) {
-						forecastRain.innerHTML += "Very light - " + dataJson.currently.precipIntensity + " in./hr.";
+						forecastRain.innerHTML += "<b>Very light - " + dataJson.currently.precipIntensity + " in./hr. </b>";
 					}
 					else {
-						forecastRain.innerHTML += "None - " + dataJson.currently.precipIntensity + " in./hr.";
+						forecastRain.innerHTML += "<b>None - " + dataJson.currently.precipIntensity + " in./hr. </b>";
 					}
 
 					var forecastHumidity = document.getElementById("forecast-humidity");
-					forecastHumidity.innerHTML += (dataJson.currently.humidity * 100) + " %";
+					forecastHumidity.innerHTML += "<b>" + (dataJson.currently.humidity * 100) + " %  </b>";
 					
 					var forecastDew = document.getElementById("forecast-dew");
-					forecastDew.innerHTML += dataJson.currently.dewPoint;
+					forecastDew.innerHTML += "<b>"+dataJson.currently.dewPoint+" </b>";
 					
 					var forecastWind = document.getElementById("forecast-wind");
-					forecastWind += dataJson.currently.windSpeed + " mph";
+					forecastWind += "<b>" +dataJson.currently.windSpeed + " mph  </b>";
 					
 					var forecastPressure = document.getElementById("forecast-pressure");
-					forecastPressure.innerHTML += dataJson.currently.pressure;
+					forecastPressure.innerHTML +="<b>" +  dataJson.currently.pressure +  "</b>";
 					
 					var forecastHourly = document.getElementById("forecast-hour");
-					forecastHourly.innerHTML += dataJson.hourly.summary;
+					forecastHourly.innerHTML += "<b>" + dataJson.hourly.summary + " </b>";
 					
 					var forecastWeek = document.getElementById("forecast-week");
-					forecastWeek.innerHTML += dataJson.daily.summary;
+					forecastWeek.innerHTML += " <b>" + dataJson.daily.summary+ " </b>";
+					
+					getWarningPanel();
 				});
 			}
 			
+			function getWarningPanel(){
+			
+				
+			//var isRaining = false;
+			//var isSnowing = false;
+			//var isVeryCold = false;
+				var warningPanel1 = $("#warning-panel1");
+				var warningPanel2 = $("#warning-panel2");
+				var dangerPanel1 = $("#danger-panel1");
+				var dangerPanel2 = $("#danger-panel2");
+				
+				if(temperatureInCelsius<0){
+					dangerPanel1.removeClass("not-visible");
+					
+					
+					
+				}
+				else if(temperatureInCelsius<10){
+					warningPanel1.removeClass("not-visible");
+					
+				}
+				else if(temperatureInCelsius>30){
+					warningPanel2.removeClass("not-visible");
+					
+				}
+				
+				if(summary.indexOf("rain")>=0){
+					dangerPanel2.removeClass("not-visible");
+					
+				}
+				
+				
+			}
+			
 			getLocation();
+			
 		</script>
 
     </body>
