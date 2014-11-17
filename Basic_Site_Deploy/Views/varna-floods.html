@@ -88,7 +88,7 @@ http://www.templatemo.com/preview/templatemo_417_grill
             <div class="row">
                 <div class="col-md-12">
                     <div class="heading-content">
-                        <h2>Varna flooded areas july 2014</h2>
+                        <h2>Varna Flooding, June 2014</h2>
                         <span>Home / <a href="varna-floods.html">Varna</a></span>
                     </div>
                 </div>
@@ -113,11 +113,9 @@ http://www.templatemo.com/preview/templatemo_417_grill
                                 <div class="side-bar">
                                     <div class="news-letters">
                                         <h4>Select Single Layer</h4>
-                                    
-										
 										
 										<select id="ddlSinleLayer"  class="select_join" >
-										  <!--<option value="../JSON/Copernicus/Varna/VARNA_crisis_information_point.geojson">Layer 1</option>-->
+										  <!--<option value="../JSON/Copernicus/Varna/VARNA_crisis_information_point.geojson">Flooded Locations</option>-->
 										  <option index="land_cover_corine" value="../JSON/Land_Cover_Corine/Varna/VAR_Zone.geojson">Land Cover</option>
 										  <option index="crisis_info_poly" value="../JSON/Copernicus/Varna/VARNA_crisis_information_poly.geojson">Main Flooded Areas</option>
 										  <option index="crisis_info_pt" value="../JSON/Copernicus/Varna/VARNA_crisis_information_point.geojson">Flooded Locations</option>
@@ -132,8 +130,6 @@ http://www.templatemo.com/preview/templatemo_417_grill
                                      <div class="news-letters">
                                         <h4>Select Multiple Layers</h4>
                                     
-										
-										
 										<select id="ddlMultipleLayers"  class="select_join" >
 										  <!--<option value="../JSON/Copernicus/Varna/VARNA_crisis_information_point.geojson">Layer 1</option>-->
 										  <option index="land_cover_corine" value="../JSON/Land_Cover_Corine/Varna/VAR_Zone.geojson">Land Cover</option>
@@ -179,12 +175,16 @@ http://www.templatemo.com/preview/templatemo_417_grill
 	<script src="../js/menu.js"></script>
 	
 			<script>
-			
 				
 				var layer={};
 				var allLayers = [];
 				L.mapbox.accessToken = 'pk.eyJ1Ijoic3BhY2VhaWQiLCJhIjoiMVNQXzJyayJ9.zXReVNp_20W9Zk2BpwDBPQ';
-				var mapbox = L.mapbox.map("map-0", 'spaceaid.k41knmap').setView([43.216696, 27.911807], 12);
+				var mapbox = L.mapbox.map("map-0", 'spaceaid.k41knmap').setView([43.19, 27.9001807], 12);
+				
+				
+				//Initialize the map with the flooded areas polygons
+				addLayer("../JSON/Copernicus/Varna/VARNA_crisis_information_poly.geojson","crisis_info_poly");
+				
 				
 				$("#ddlSinleLayer").on("change",function(){
 		    	mapbox.removeLayer(layer);

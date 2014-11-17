@@ -163,7 +163,6 @@ http://www.templatemo.com/preview/templatemo_417_grill
                                 </div>
                             </div>
                         </div>
-					
                     </div>
                 </div>
             </div>
@@ -192,21 +191,26 @@ http://www.templatemo.com/preview/templatemo_417_grill
 				var layer={};
 				var allLayers = [];
 				L.mapbox.accessToken = 'pk.eyJ1Ijoic3BhY2VhaWQiLCJhIjoiMVNQXzJyayJ9.zXReVNp_20W9Zk2BpwDBPQ';
-				var mapbox = L.mapbox.map("map-0", 'spaceaid.k41knmap').setView([43.5694709, 27.840094200000067], 12);
+				var mapbox = L.mapbox.map("map-0", 'spaceaid.k41knmap').setView([43.5694709, 27.830094200000067], 13);
+				
+				
+				//Initialize the map with the flooded areas polygons
+				addLayer("../JSON/Copernicus/Dobric/DOBRIC_crisis_information_poly.geojson","crisis_info_poly");
 				
 				$("#ddlSinleLayer").on("change",function(){
 		    	mapbox.removeLayer(layer);
-				
-				
+					
 					var jsonPath  = $("#ddlSinleLayer").val();
-					addLayer(jsonPath);
+					var jsonIndex = $("#ddlSinleLayer").find(":selected").attr("index");
+					addLayer(jsonPath,jsonIndex);
 					
 				});
 				
 					$("#ddlMultipleLayers").on("change",function(){
 
 					var jsonPath  = $("#ddlMultipleLayers").val();
-					addLayer(jsonPath);
+					var jsonIndex = $("#ddlMultipleLayers").find(":selected").attr("index");
+					addLayer(jsonPath,jsonIndex);
 					
 				});
 				
