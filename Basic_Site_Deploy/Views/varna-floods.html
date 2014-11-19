@@ -58,8 +58,8 @@ http://www.templatemo.com/preview/templatemo_417_grill
 							<ul style="display: none;" class="dropdown-menu bold">
 								<li><a href="varna-floods.html">Varna</a></li>
 								<li><a href="dobrich-floods.html">Dobrich</a></li>
-								<li><a href="dobrich-floods_mirela.html">Dobrich (colorfull)</a></li>
-								<li><a href="kilifarevo-floods.html">Kilifarevo</a></li>
+							<!--	<li><a href="dobrich-floods_mirela.html">Dobrich (colorfull)</a></li>
+								<li><a href="kilifarevo-floods.html">Kilifarevo</a></li> -->
 
 							
 							</ul>
@@ -109,13 +109,36 @@ http://www.templatemo.com/preview/templatemo_417_grill
 								</div>
                                 <!--<div id='brush' class='ui-brush'></div>-->
                             </div>
-                            <div class="col-md-3 col-md-offset-1">
+							
+							<div class="col-md-3 col-md-offset-1">
+							
+								  <span>
+									    <span > <b> Overlap layers </b><input style="display:inline-block;width:auto" id="cbxOverlapLayers" type="checkbox"></span>
+										
+									  </span>
+									<br/>
+									<br/>
+							
+								<div class="list-group">
+								  <a  index="crisis_info_poly" value="../JSON/Copernicus/Varna/VARNA_crisis_information_poly.geojson" class="list-group-item active">Main Flooded Areas</a>
+								  <a  index="crisis_info_pt" value="../JSON/Copernicus/Varna/VARNA_crisis_information_point.geojson" class="list-group-item">Flooded Locations</a>
+								  <a  index="hydro_poly" value="../JSON/Copernicus/Varna/VARNA_hydrology_poly.geojson" class="list-group-item">Hydrology Polygons</a>
+								  <a  index="pt_interest" value="../JSON/Copernicus/Varna/VARNA_points_of_interest.geojson" class="list-group-item">Points of Interest</a>
+								  <a  index="settle_pt" value="../JSON/Copernicus/Varna/VARNA_settlements_point.geojson" class="list-group-item">Settlement Points</a>
+								  <a  index="trans_line" value="../JSON/Copernicus/Varna/VARNA_transportation_line.geojson" class="list-group-item">Street Grid</a>
+								  <a  index="util_poly" value="../JSON/Copernicus/Varna/VARNA_utilities_poly.geojson" class="list-group-item">Utilities Points</a>
+								  <a  index="land_cover_corine" value="../JSON/Land_Cover_Corine/Varna/VAR_Zone.geojson" class="list-group-item">Land Cover</a>
+								</div>
+								  <input type="button" class= "btn btn-warning btn-large" id="btnDeleteAllLayers" value="Remove all layers"/>
+							</div>
+							
+                          <!--  <div class="col-md-3 col-md-offset-1">
                                 <div class="side-bar">
                                     <div class="news-letters">
                                         <h4>Select Single Layer</h4>
 										
 										<select id="ddlSinleLayer"  class="select_join" >
-										  <!--<option value="../JSON/Copernicus/Varna/VARNA_crisis_information_point.geojson">Flooded Locations</option>-->
+										
 										  <option index="land_cover_corine" value="../JSON/Land_Cover_Corine/Varna/VAR_Zone.geojson">Land Cover</option>
 										  <option index="crisis_info_poly" value="../JSON/Copernicus/Varna/VARNA_crisis_information_poly.geojson">Main Flooded Areas</option>
 										  <option index="crisis_info_pt" value="../JSON/Copernicus/Varna/VARNA_crisis_information_point.geojson">Flooded Locations</option>
@@ -131,7 +154,7 @@ http://www.templatemo.com/preview/templatemo_417_grill
                                         <h4>Select Multiple Layers</h4>
                                     
 										<select id="ddlMultipleLayers"  class="select_join" >
-										  <!--<option value="../JSON/Copernicus/Varna/VARNA_crisis_information_point.geojson">Layer 1</option>-->
+										
 										  <option index="land_cover_corine" value="../JSON/Land_Cover_Corine/Varna/VAR_Zone.geojson">Land Cover</option>
 										  <option index="crisis_info_poly" value="../JSON/Copernicus/Varna/VARNA_crisis_information_poly.geojson">Main Flooded Areas</option>
 										  <option index="crisis_info_pt" value="../JSON/Copernicus/Varna/VARNA_crisis_information_point.geojson">Flooded Locations</option>
@@ -149,7 +172,7 @@ http://www.templatemo.com/preview/templatemo_417_grill
                                     
                                  
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
 					
                     </div>
@@ -213,18 +236,33 @@ http://www.templatemo.com/preview/templatemo_417_grill
 				//Initialize the map with the flooded areas polygons
 				addLayer("../JSON/Copernicus/Varna/VARNA_crisis_information_poly.geojson","crisis_info_poly");
 				
+				//currently using only this event handler
+				$(".list-group-item").on("click",function(e){
+					if(!($("#cbxOverlapLayers").is(':checked'))){
+						mapbox.removeLayer(layer);
+					}
+					var allListItems = $(".list-group-item");
+					for(i=0;i<allListItems.length;i++)
+					{
+						$(allListItems[i]).removeClass("active");
+					}
+					
+					var checkbedItem = $(e.target).addClass("active");
+					var jsonPath  = $(checkbedItem).attr("value");
+					var jsonIndex = $(checkbedItem).attr("index");
+					addLayer(jsonPath,jsonIndex);
+				});
+				
 				
 				$("#ddlSinleLayer").on("change",function(){
-		    	mapbox.removeLayer(layer);
-				
-				
+					mapbox.removeLayer(layer);
 					var jsonPath  = $("#ddlSinleLayer").val();
 					var jsonIndex = $("#ddlSinleLayer").find(":selected").attr("index");
 					addLayer(jsonPath,jsonIndex);
 					
 				});
 				
-					$("#ddlMultipleLayers").on("change",function(){
+				$("#ddlMultipleLayers").on("change",function(){
 
 					var jsonPath  = $("#ddlMultipleLayers").val();
 					var jsonIndex = $("#ddlMultipleLayers").find(":selected").attr("index");
@@ -247,8 +285,8 @@ http://www.templatemo.com/preview/templatemo_417_grill
 						  layer =L.mapbox.featureLayer().addTo(mapbox)
 						  	.on('layeradd', function(e) {
 								var marker = e.layer;
-								console.log(marker);
-								console.log(marker.feature.geometry.type);
+								//console.log(marker);
+								//console.log(marker.feature.geometry.type);
 
 
 
@@ -278,7 +316,7 @@ http://www.templatemo.com/preview/templatemo_417_grill
 //------------------------------------	
 //Setting the style of POLYGON objects								
 								if (marker.feature.geometry.type == 'Polygon'){
-									console.log(L.mapbox);
+									//console.log(L.mapbox);
 									switch(jsonIndex) {
 										case 'land_cover_corine':
 											lineColor='#ffdb00';
@@ -314,7 +352,7 @@ http://www.templatemo.com/preview/templatemo_417_grill
 //------------------------------------	
 //Setting the style of LINESTRING objects								
 								if (marker.feature.geometry.type == 'LineString'){
-									console.log(L.mapbox);
+									//console.log(L.mapbox);
 									switch(jsonIndex) {
 										case 'trans_line':
 											lineColor='#03c6ff';
@@ -335,6 +373,7 @@ http://www.templatemo.com/preview/templatemo_417_grill
 									
 							})//END .on('layeradd')
 							allLayers.push(layer);
+							
 							layer.setGeoJSON(data.features);
 				
 					});
