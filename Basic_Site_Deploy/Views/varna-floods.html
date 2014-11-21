@@ -34,6 +34,7 @@ http://www.templatemo.com/preview/templatemo_417_grill
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
+	<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-pip/v0.0.2/leaflet-pip.js'></script>
 
     <style>
 	
@@ -298,8 +299,16 @@ http://www.templatemo.com/preview/templatemo_417_grill
 											color='#ff8888';
 											break;
 										case 'pt_interest':
-											color='#75ad3e'
-											break;
+											var match;
+											match = leafletPip.pointInLayer(marker.getLatLng(), allLayers[0], false);
+									       		if (match.length) {
+									       			color='#FF0000';
+									       			break;
+									       		}
+									       		else {
+									       			color='#75ad3e';
+									       			break;
+									       		}
 										case 'settle_pt':
 											color='#03c6ff'
 											break;

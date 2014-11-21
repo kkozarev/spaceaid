@@ -154,3 +154,13 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+
+Basic_Site_Deploy/Views/Kamen.html
+
+Basic_Site_Deploy/Views/Kamen1.html
+
+Basic_Site_Deploy/Views/varna-floods.html
+
+Basic_Site_Deploy/Views/varna-floods_overlapping_points.html
+
+Basic_Site_Deploy/Views/example_overlap.html
