@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Space Aid Project</title>
+    <meta charset="utf-8" />
+    <meta name='viewport' content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi' />
+    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+    <link href="styles/main.css" rel="stylesheet" />
+
+    <script src="cordova.js"></script>
+    <script src="kendo/js/jquery.min.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script type='text/javascript' src='libraries/d3.js'></script>
+    
+    <!-- mapbox libraries -->
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
+	<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-pip/v0.0.2/leaflet-pip.js'></script>
+    <script type='text/javascript' src='libraries/zepto.js'></script>
+    <script type='text/javascript' src='libraries/zepto-onpress.js'></script>
+    
+    <script src="scripts/app.js"></script>
+    <script src="scripts/forecast.js"></script>
+</head>
+<body>
+ 
+  <div data-role="layout" data-id="main">
+    <div data-role="header">
+      <div data-role="navbar">
+        <span data-role="view-title"></span>
+        <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+      </div>
+    </div>
+
+    <!-- application views will be rendered here -->
+    
+  </div>
+
+  <!-- application drawer and contents -->
+  <div data-role="drawer" id="appDrawer" style="width: 270px" data-title="Navigation">
+    <div data-role="header">
+      <div data-role="navbar">
+        <span data-role="view-title"></span>
+      </div>
+    </div>
+    <ul data-role="listview">
+      <li>
+        <a href="views/home.html">Home</a>
+      </li>
+      <li>
+        <a href="views/settings.html">Varna floods</a>
+      </li>
+      <li>
+        <a href="views/contacts.html">Dobrich floods</a>
+      </li>
+    </ul>
+  </div>       
+
+</body>
+</html>
