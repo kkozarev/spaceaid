@@ -8,7 +8,7 @@
     {
         static void Main(string[] args)
         {
-            var root = args.Any() ? args.Single() : @"C:\Users\Bon\Desktop\Corine dissolved";
+            var root = args.Any() ? args.Single() : @"C:\Users\Bon\Desktop\Corine Dissolve";
             var filePaths = Directory.GetFiles(root, "*.shp", SearchOption.AllDirectories);
             foreach (var path in filePaths)
             {
