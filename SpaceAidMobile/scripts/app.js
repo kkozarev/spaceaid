@@ -2,7 +2,7 @@
 
     // store a reference to the application object that will be created
     // later on so that we can use it if need be
-    var app;
+    var app = global.app = global.app || {};
 
     // create an object to store the models for each view
     window.APP = {
@@ -51,7 +51,7 @@
             window.position.latitude = position.coords.latitude;
             window.position.longitude = position.coords.longitude;
             console.log(window.position);
-            ForecastOnLoad(ForecastViewModel);
+            global.app.forecastService.onLoad();
         }, function() {
             navigator.notification.alert("Could not get your location. Forecast can't be shown", 
                                           null, 

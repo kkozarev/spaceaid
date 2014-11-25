@@ -1,1 +1,93 @@
 .km-drawer-button:before, .km-drawer-button:after  { content: "\E077"; }
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-select: none;
+}
+
+#varna-map,
+#dobrich-map {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 900px;
+    width: 100%;
+}
+
+
+#is-very-cold {
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+.forecast li ul li,
+.forecast li div,
+#location {
+    text-align: center;
+}
+
+#location {
+    padding: 5px;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#icon
+{
+	height:50px;
+}
+
+.clear-day {
+	background-image: url('images/clear-day.png') center no-repeat;
+	background-position: center; 
+}
+
+.clear-night {
+	background: url('images/clear-night.png') center no-repeat;
+	
+}
+
+.rain {
+	background: url('images/rain.png') center no-repeat ;
+	
+
+}
+
+#icon .snow {
+	background: url('images/snow.png') center no-repeat;
+	
+}
+
+.sleet {
+	background: url('images/sleet.png') center no-repeat;
+	
+}
+
+.wind {
+	background: url('images/wind.png') center no-repeat;
+	
+}
+
+.fog {
+	background: url('images/fog.png') center no-repeat;
+	 
+}
+
+.cloudy {
+	background: url('images/cloudy.png') center no-repeat;
+	 
+}
+
+.partly-cloudy-day {
+	background: url('images/partly-cloudy-day.png') center no-repeat;
+	
+}
+
+.partly-cloudy-night {
+	background: url('images/partly-cloudy-night.png') center no-repeat;
+	
+}

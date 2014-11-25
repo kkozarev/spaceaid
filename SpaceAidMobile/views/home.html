@@ -1,6 +1,97 @@
 <div data-role="view" 
-     data-title="Home" 
+     data-title="Forecast" 
      data-layout="main" 
-     data-model="ForecastViewModel">
-  <h1 data-bind="html: forecastUrl"></h1>
+     data-model="app.forecastService.viewModel">
+  <div class="view-forecast">
+      <div id="location">
+          <span>The weather right now in </span>
+          <span data-bind="text: timezone"></span>
+      </div>
+      
+      <div id="icon"></div>
+      
+      <div>
+          <ul class="forecast" data-role="listview" data-style="inset" data-type="group">
+              <li>
+                  <ul>
+                      <li id="is-very-cold" data-bind="visible: isVeryCold">
+                          <span>It is very cold outside! Get some warm clothes and/or an umbrella!</span>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                  Currently
+                  <!--Image here-->
+                  <ul>
+                      <li>
+                          <span data-bind="text: summary"></span>
+                      </li>
+                      <li>
+                          <span>Temperature: </span>
+                          <span data-bind="text: temperature"></span>
+                          <span>° Celsius</span>
+                      </li>
+                      <li>
+                          <span>Feels like: </span>
+                          <span data-bind="text: temperatureFeel"></span>
+                          <span>° Celsius</span>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                  More info
+                  <ul>
+                      <li>
+                          <span>Chance of rain: </span>
+                          <span data-bind="text: precipProbability"></span>
+                          <span>%</span>
+                      </li>
+                      <li>
+                          <span>Amount of rain: </span>
+                          <span data-bind="text: precipIntensity"></span>
+                          <span> in./hr.</span>
+                      </li>
+                      <li>
+                          <span>Humidity: </span>
+                          <span data-bind="text: humidity"></span>
+                          <span>%</span>
+                      </li>
+                      <li>
+                          <span>Dew point: </span>
+                          <span data-bind="text: dewPoint"></span>
+                          <span>° Celsius</span>
+                      </li>
+                      <li>
+                          <span>Wind speed: </span>
+                          <span data-bind="text: wind"></span>
+                          <span> mph</span>
+                      </li>
+                      <li>
+                          <span>Pressure: </span>
+                          <span data-bind="text: pressure"></span>
+                          <span> millibars</span>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                  In the next hours
+                  <!--Image here-->
+                  <ul>
+                      <li>
+                          <span data-bind="text: hourly"></span>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                  In the next days
+                  <!--Image here-->
+                  <ul>
+                      <li>
+                          <span data-bind="text: daily"></span>
+                      </li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+  </div>
 </div>

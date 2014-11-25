@@ -1,10 +1,13 @@
 (function(global) {
-    var forecastViewModel = {
+    var ForecastViewModel,
+    app = global.app = global.app || {};
+    
+    ForecastViewModel = kendo.data.ObservableObject.extend({
         forecastUrl: "http://forecastapi.apphb.com/api/forecast?",
         temperature: 0,
         temperatureFeel: 0,
         isVeryCold: false,
-        alerts: "",
+        alerts: {},
         timezone: "",
         weatherIcon: "",
         summary: "",
@@ -15,47 +18,56 @@
         wind: 0,
         pressure: 0,
         hourly: "",
-        daily: "",
-    };
-    
-    window.ForecastViewModel = forecastViewModel;
-    window.ForecastOnLoad = onLoad;
+        daily: "",    
+        sendForecastRequest: function(url) {
+            d3.json(url, function(data) {
+                var that = global.app.forecastService.viewModel;
+		        var dataJson = JSON.parse(data);
+                console.log(dataJson);
+                
+                that.set ("temperature", that.degreesToCelsius(dataJson.currently.temperature));
+                that.set ("temperatureFeel", that.degreesToCelsius(dataJson.currently.apparentTemperature));
+                if (that.temperatureFeel < 10) {
+                    that.set("isVeryCold", true);
+                    //TODO: Send notification to the user
+                }
+                that.set ("timezone", dataJson.timezone);
+                that.set ("weatherIcon", dataJson.currently.icon);
+                var forecastIcon = document.getElementById("icon");
+                forecastIcon.className += dataJson.currently.icon;
+                that.set ("summary", dataJson.currently.summary);
+                that.set ("precipIntensity", dataJson.currently.precipIntensity);
+                that.set ("precipProbability", dataJson.currently.precipProbability * 100);
+                that.set ("humidity", dataJson.currently.humidity * 100);
+                that.set ("dewPoint", dataJson.currently.dewPoint);
+                that.set ("wind", dataJson.currently.windSpeed);
+                that.set ("pressure", dataJson.currently.pressure);
+                that.set ("hourly", dataJson.hourly.summary);
+                that.set ("daily", dataJson.daily.summary);
+                if (dataJson.alerts != null) {
+                	that.set("alerts", dataJson.alerts);
+                }
+                console.log(that);
+            });
+        },
+        degreesToCelsius: function(temp) {
+             return (((parseInt(temp)- 32)*5)/9 ).toFixed(2);
+        }
+    });
     
     function onLoad() {
-        window.ForecastViewModel.forecastUrl = 
-            window.ForecastViewModel.forecastUrl 
-                + "latitude=" + window.position.latitude 
-                + "&longitude=" + window.position.longitude;
-        console.log(window.ForecastViewModel.forecastUrl);
-        sendForecastRequest(window.ForecastViewModel.forecastUrl);
-    };
-    
-    function sendForecastRequest(url) {
-        d3.json(url, function(data) {
-		    var dataJson = JSON.parse(data);
-            console.log(dataJson);
-            window.ForecastViewModel.temperature = degreesToCelsius(dataJson.currently.temperature);
-            window.ForecastViewModel.temperatureFeel = degreesToCelsius(dataJson.currently.apparentTemperature);
-            window.ForecastViewModel.timezone = dataJson.timezone;
-            window.ForecastViewModel.weatherIcon = dataJson.currently.icon;
-            window.ForecastViewModel.summary = dataJson.currently.summary;
-            window.ForecastViewModel.precipIntensity = dataJson.currently.precipIntensity;
-            window.ForecastViewModel.precipProbability = dataJson.currently.precipProbability;
-            window.ForecastViewModel.humidity = dataJson.currently.humidity;
-            window.ForecastViewModel.dewPoint = dataJson.currently.dewPoint;
-            window.ForecastViewModel.wind = dataJson.currently.windSpeed;
-            window.ForecastViewModel.pressure = dataJson.currently.pressure;
-            window.ForecastViewModel.hourly = dataJson.hourly.summary;
-            window.ForecastViewModel.daily = dataJson.daily.summary;
-            if (dataJson.alerts != null) {
-            	window.ForecastViewModel.alerts = dataJson.alerts;
-            }
-            console.log(window.ForecastViewModel);
-            //NEEDS TO UPDATE THE DATA MODEL IN HOME.HTML!!!
-        });
-    };
-    
-    function degreesToCelsius(temp) {
-       return (((parseInt(temp)- 32)*5)/9 ).toFixed(2);
+        var that =  global.app.forecastService.viewModel;
+        var url = that.forecastUrl
+                  + "latitude=" + window.position.latitude 
+                  + "&longitude=" + window.position.longitude;
+        that.set("forecastUrl", url);
+            
+        console.log(that.forecastUrl);
+        that.sendForecastRequest(that.forecastUrl);
     }
+    
+    app.forecastService = {
+        viewModel: new ForecastViewModel(),
+        onLoad: onLoad
+    };
 })(window);

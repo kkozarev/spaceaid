@@ -21,6 +21,8 @@
     
     <script src="scripts/app.js"></script>
     <script src="scripts/forecast.js"></script>
+    <script src="scripts/varna-map.js"></script>
+    <script src="scripts/dobrich-map.js"></script>
 </head>
 <body>
  
@@ -28,7 +30,11 @@
     <div data-role="header">
       <div data-role="navbar">
         <span data-role="view-title"></span>
-        <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+        <a data-role="button" 
+           href="#appDrawer" 
+           data-rel="drawer" 
+           data-align="left" 
+           data-icon="drawer-button"></a>
       </div>
     </div>
 
@@ -37,7 +43,7 @@
   </div>
 
   <!-- application drawer and contents -->
-  <div data-role="drawer" id="appDrawer" style="width: 270px" data-title="Navigation">
+  <div data-role="drawer" data-swipe-to-open="false" id="appDrawer" style="width: 270px" data-title="Navigation">
     <div data-role="header">
       <div data-role="navbar">
         <span data-role="view-title"></span>
@@ -45,13 +51,13 @@
     </div>
     <ul data-role="listview">
       <li>
-        <a href="views/home.html">Home</a>
+        <a href="views/home.html">Home/Forecast</a>
       </li>
       <li>
-        <a href="views/settings.html">Varna floods</a>
+        <a href="views/varna.html">Varna floods</a>
       </li>
       <li>
-        <a href="views/contacts.html">Dobrich floods</a>
+        <a href="views/dobrich.html">Dobrich floods</a>
       </li>
     </ul>
   </div>       
