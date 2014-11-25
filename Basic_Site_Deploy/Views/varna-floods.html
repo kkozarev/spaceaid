@@ -130,6 +130,7 @@ http://www.templatemo.com/preview/templatemo_417_grill
 								  <a  index="util_poly" value="../JSON/Copernicus/Varna/VARNA_utilities_poly.geojson" class="list-group-item">Utilities Points</a>
 								  <a  index="land_cover_corine" value="../JSON/Land_Cover_Corine/Varna/VAR_Zone.geojson" class="list-group-item">Land Cover</a>
 								</div>
+								<input type="button" class= "btn btn-warning btn-large" id="getDataOfInterest" value="Find data of interest"/>
 								  <input type="button" class= "btn btn-warning btn-large" id="btnDeleteAllLayers" value="Remove all layers"/>
 							</div>
 							
@@ -228,6 +229,7 @@ http://www.templatemo.com/preview/templatemo_417_grill
 	
 			<script>
 				
+				var dataOfInterestClicked = false;
 				var layer={};
 				var allLayers = [];
 				L.mapbox.accessToken = 'pk.eyJ1Ijoic3BhY2VhaWQiLCJhIjoiMVNQXzJyayJ9.zXReVNp_20W9Zk2BpwDBPQ';
@@ -239,6 +241,17 @@ http://www.templatemo.com/preview/templatemo_417_grill
 				
 				//currently using only this event handler
 				$(".list-group-item").on("click",function(e){
+				
+					if(dataOfInterestClicked){
+					
+						$("#map-0").remove();
+						$("#map-holder").html("<div id='map-0' class='col-md-12 map-height-large dark'></div>");
+						 layer={};
+				         allLayers = [];
+						L.mapbox.accessToken = 'pk.eyJ1Ijoic3BhY2VhaWQiLCJhIjoiMVNQXzJyayJ9.zXReVNp_20W9Zk2BpwDBPQ';
+					    mapbox = L.mapbox.map("map-0", 'spaceaid.k41knmap').setView([43.19, 27.9001807], 12);
+						dataOfInterestClicked = false;
+					}
 					if(!($("#cbxOverlapLayers").is(':checked'))){
 						mapbox.removeLayer(layer);
 					}
@@ -255,21 +268,21 @@ http://www.templatemo.com/preview/templatemo_417_grill
 				});
 				
 				
-				$("#ddlSinleLayer").on("change",function(){
-					mapbox.removeLayer(layer);
-					var jsonPath  = $("#ddlSinleLayer").val();
-					var jsonIndex = $("#ddlSinleLayer").find(":selected").attr("index");
-					addLayer(jsonPath,jsonIndex);
-					
-				});
-				
-				$("#ddlMultipleLayers").on("change",function(){
-
-					var jsonPath  = $("#ddlMultipleLayers").val();
-					var jsonIndex = $("#ddlMultipleLayers").find(":selected").attr("index");
-					addLayer(jsonPath,jsonIndex);
-
-				});
+				//$("#ddlSinleLayer").on("change",function(){
+				//	mapbox.removeLayer(layer);
+				//	var jsonPath  = $("#ddlSinleLayer").val();
+				//	var jsonIndex = $("#ddlSinleLayer").find(":selected").attr("index");
+				//	addLayer(jsonPath,jsonIndex);
+				//	
+				//});
+				//
+				//$("#ddlMultipleLayers").on("change",function(){
+                //
+				//	var jsonPath  = $("#ddlMultipleLayers").val();
+				//	var jsonIndex = $("#ddlMultipleLayers").find(":selected").attr("index");
+				//	addLayer(jsonPath,jsonIndex);
+                //
+				//});
 				
 				
 				$("#btnDeleteAllLayers").on("click",function(){
@@ -277,6 +290,28 @@ http://www.templatemo.com/preview/templatemo_417_grill
 						mapbox.removeLayer(allLayers[i]);
 					}
 				});
+				
+				$("#getDataOfInterest").on("click",function(){
+						$("#map-0").remove();
+						$("#map-holder").html("<div id='map-0' class='col-md-12 map-height-large dark'></div>");
+					 layer={};
+					 allLayers = [];
+				 	 L.mapbox.accessToken = 'pk.eyJ1Ijoic3BhY2VhaWQiLCJhIjoiMVNQXzJyayJ9.zXReVNp_20W9Zk2BpwDBPQ';
+					 mapbox = L.mapbox.map("map-0", 'spaceaid.k03hjd0g').setView([43.19, 27.9001807], 12);
+					 dataOfInterestClicked = true;
+					 
+				});
+				
+				function getRandomColor() {
+					var letters = '0123456789ABCDEF'.split('');
+					var color = '#';
+					for (var i = 0; i < 6; i++ ) {
+						color += letters[Math.floor(Math.random() * 16)];
+					}
+					return color;
+				}
+								
+				
 			
 //===========================================================================
 //Function to load each layer
@@ -300,7 +335,9 @@ http://www.templatemo.com/preview/templatemo_417_grill
 											break;
 										case 'pt_interest':
 											var match;
-											match = leafletPip.pointInLayer(marker.getLatLng(), allLayers[0], false);
+											var lanleg = marker.getLatLng();
+											//var test = L.latLng(43.1989342119948,27.91172599799993);
+											match = leafletPip.pointInLayer(lanleg, allLayers[0], false);
 									       		if (match.length) {
 									       			color='#FF0000';
 									       			break;
@@ -319,13 +356,47 @@ http://www.templatemo.com/preview/templatemo_417_grill
 									}));	
 								}
 //----------------------------------	
-
-
+//Setting the style of MultiPolygon objects		
+								
+								if (marker.feature.geometry.type == "MultiPolygon"){
+									
+									lineColor= getRandomColor();
+									fillColor= getRandomColor();
+									
+									for(var l in layer._layers){
+									
+									if (layer._layers.hasOwnProperty(l)) {
+											var val = layer._layers[l];
+											val.setStyle({
+                            			weight: 4,
+                            			opacity: 0.8,
+                            			color: getRandomColor,
+                            			//dashArray: '3',//punktirano
+                           				fillOpacity: 0.6,
+                          				fillColor: getRandomColor()
+											});
+										}
+										
+									}
+								
+                     			 	//layer.setStyle({
+                            		//	weight: 4,
+                            		//	opacity: 0.8,
+                            		//	color: lineColor,
+                            		//	//dashArray: '3',//punktirano
+                           			//	fillOpacity: 0.6,
+                          			//	fillColor: lineColor
+                       			 	//});
+								}
 
 //------------------------------------	
 //Setting the style of POLYGON objects								
 								if (marker.feature.geometry.type == 'Polygon'){
 									//console.log(L.mapbox);
+									
+									
+									
+									
 									switch(jsonIndex) {
 										case 'land_cover_corine':
 											lineColor='#ffdb00';
